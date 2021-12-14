@@ -30,7 +30,7 @@
                         <ul class="list-group">                                                
                             <my-goals-component 
                                     :objective="objectiveSelected" 
-                                    @showAction="onShowMy">
+                                    >
                             </my-goals-component>
                         </ul>
                     </div>    
@@ -62,25 +62,25 @@ export default {
                 showAct: false,
                 objectiveSelected: null,
                 goalSelected: null,
+                show: true
             }
         },
         created: function () {
             eventBus.$on('showAction', function (data) {                
                 this.goalHasActions = true;
                 this.goalSelected = data;
+                this.objectiveHasGoals = false;
+                
             }.bind(this));
 
             eventBus.$on('newProgress', function (data) {                           
-            
                 axios.get('/myobjectives').then((response) => {
                     this.objectives = response.data;
                     this.goalHasActions = false;
+                    this.objectiveHasGoals = true;
                 });
                 
-                this.checkStatusGoal(data);
-                
-                
-                         
+                this.checkStatusGoal(data);                                                         
             }.bind(this));
         },
         mounted() {            
@@ -97,11 +97,10 @@ export default {
                 this.objectiveHasGoals = true;
                 this.objectiveSelected = objective;
             },
-            onShowMy(goal){                                
+            /*onShowMy(goal){                                
                 this.goalHasActions = true;
                 this.goalSelected = goal;
-
-            },
+            },*/
             
             async checkStatusGoal(progress){
                 await axios.get('/progressbyaction/'+progress.action_id).then((response) => {

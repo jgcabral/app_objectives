@@ -6,7 +6,15 @@
                 <select name="goal_id" v-model="goal" class="form-select form-control" disabled="disabled">                            
                     <option v-for="item in goals" :value="item" :key="item.id">{{ item.description }}</option>                        
                 </select>
-            </div>                            
+            </div>  
+
+            <div class="form-group col-md-4">
+                <label for="">Actividad</label>
+                <select name="activity_id" v-model="activity" class="form-select form-control">                            
+                    <option v-for="item in activities" :value="item" :key="item.id">{{ item.description }}</option>                        
+                </select>
+                
+            </div>                          
 
             <div class="form-group">
                 <label for="exampleInputEmail1">Tiempo</label>
@@ -34,13 +42,17 @@ export default {
                 timeSelected: null,      
                 showFormProgress: null,
                 actionsByGoal: null,                
-                times: [ { id: 15, description: "15 Min" }, { id: 30, description: "30 Min" } ]
+                times: [ { id: 15, description: "15 Min" }, { id: 30, description: "30 Min" } ],
+                activities:[],
+                activity: null
             }
         },
         mounted() {            
             this.getGoals();
 
             this.getActionsByGoal();
+
+            this.getActivitiesByGoal();
             
         },
 
@@ -64,6 +76,13 @@ export default {
                     this.timeSelected = this.times.find(item => item.id == response.data.time );                       
                 });
             },
+
+            async getActivitiesByGoal(){
+                await axios.get('/activitiesbygoal/' + this.goal.id).then((response) => {       
+                    this.activities = response.data;                                                             
+                });
+            },
+
             async getGoals(){
                 await axios.get('/goals').then((response) => {
                     this.goals = response.data;          

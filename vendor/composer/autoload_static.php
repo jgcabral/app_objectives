@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit10981ec9c10042d11ed4a8bb988e25c7
+class ComposerStaticInit2a341931c1866d1ad5c0c09a14a9d17c
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -456,6 +456,7 @@ class ComposerStaticInit10981ec9c10042d11ed4a8bb988e25c7
         'App\\Core\\Domain\\Progress' => __DIR__ . '/../..' . '/app/Core/Domain/Progress.php',
         'App\\Core\\Repository\\ActivityRepository' => __DIR__ . '/../..' . '/app/Core/Repository/ActivityRepository.php',
         'App\\Core\\Repository\\GoalRepository' => __DIR__ . '/../..' . '/app/Core/Repository/GoalRepository.php',
+        'App\\Core\\Repository\\IActivity' => __DIR__ . '/../..' . '/app/Core/Repository/IActivity.php',
         'App\\Core\\Repository\\IGoal' => __DIR__ . '/../..' . '/app/Core/Repository/IGoal.php',
         'App\\Core\\Repository\\IObjective' => __DIR__ . '/../..' . '/app/Core/Repository/IObjective.php',
         'App\\Core\\Repository\\IProgress' => __DIR__ . '/../..' . '/app/Core/Repository/IProgress.php',
@@ -4860,10 +4861,10 @@ class ComposerStaticInit10981ec9c10042d11ed4a8bb988e25c7
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit10981ec9c10042d11ed4a8bb988e25c7::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit10981ec9c10042d11ed4a8bb988e25c7::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit10981ec9c10042d11ed4a8bb988e25c7::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit10981ec9c10042d11ed4a8bb988e25c7::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2a341931c1866d1ad5c0c09a14a9d17c::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2a341931c1866d1ad5c0c09a14a9d17c::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit2a341931c1866d1ad5c0c09a14a9d17c::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit2a341931c1866d1ad5c0c09a14a9d17c::$classMap;
 
         }, null, ClassLoader::class);
     }

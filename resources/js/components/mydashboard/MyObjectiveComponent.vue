@@ -5,7 +5,10 @@
         <div class="progress">            
             <div v-bind:class="classProgress" role="progressbar" v-bind:style="styleObject" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">{{ objective.progress }}%</div>
         </div>
-        <button type="submit" class="btn btn-primary btn-sm float-right" v-on:click="show(objective)">Ver Metas</button>               
+        <button type="submit" class="btn btn-secondary btn-sm float-right" v-on:click="show(objective)">
+            <i class="bi-eye"></i> 
+            Metas
+        </button>               
     </li>
 
 </template>

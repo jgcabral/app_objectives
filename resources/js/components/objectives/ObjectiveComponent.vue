@@ -2,7 +2,8 @@
     
     <li class="list-group-item">                                                            
         {{ objective.description }}             
-        <button type="button" class="btn btn-primary btn-sm float-right" v-on:click="addGoal(objective)">+ Meta</button>                         
+        <button type="button" class="btn btn-secondary btn-sm float-right" v-on:click="addGoal(objective)"><i class="bi-plus-circle-fill"></i> Meta
+        </button>                         
     </li>
 
 </template>

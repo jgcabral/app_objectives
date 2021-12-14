@@ -4,7 +4,9 @@
         {{ goal.description }}      
         <span class="badge badge-pill badge-success" v-show="goal.finished">Finalizada</span>           
         <button type="submit" class="btn btn-primary btn-sm float-right" v-on:click="showAction(goal)" v-if="progress >= 100 && goal.finished == 0">Finalizar</button>  
-        <button type="submit" class="btn btn-primary btn-sm float-right" v-on:click="showAction(goal)" v-if="goal.finished == 0">+ Progreso</button>               
+        <button type="submit" class="btn btn-secondary btn-sm float-right" v-on:click="showAction(goal)" v-if="goal.finished == 0">
+            <i class="bi-plus-circle-fill"></i>  Progreso
+        </button>               
     </li>
 
 </template>

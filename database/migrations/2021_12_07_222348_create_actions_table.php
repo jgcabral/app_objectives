@@ -17,7 +17,10 @@ class CreateActionsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('goal_id')->unsigned();
             $table->foreign('goal_id')->references('id')->on('goals')->onDelete('cascade');
-            $table->index('goal_id');            
+            $table->index('goal_id');    
+            $table->bigInteger('activity_id')->unsigned();
+            $table->foreign('activity_id')->references('id')->on('activities')->onDelete('cascade');
+            $table->index('activity_id');            
             $table->bigInteger('time');//guardar los segundos de los dias
             $table->timestamps();
         });

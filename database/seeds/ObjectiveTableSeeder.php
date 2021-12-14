@@ -17,7 +17,7 @@ class ObjectiveTableSeeder extends Seeder
             'user_id' => 1
         ]);
 
-        /*
+        
         Objective::create([
             'description'=> 'Malagata - Luciernaga',   
             'user_id' => 1
@@ -37,7 +37,7 @@ class ObjectiveTableSeeder extends Seeder
             'description'=> '7 Lunas - Loco Corazón',   
             'user_id' => 1
         ]);
-        */
+        
 
     }
 }

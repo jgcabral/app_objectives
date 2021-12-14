@@ -3,20 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Core\Domain\Activity;
+use App\Core\Repository\IActivity;
 use Illuminate\Http\Request;
 
 class ActivityController extends Controller
 {
+    private $iActivity;
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function __construct(IActivity $activityRepository)
     {
-        //
+        $this->iActivity = $activityRepository;
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -35,27 +33,6 @@ class ActivityController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -64,7 +41,7 @@ class ActivityController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
         //
     }

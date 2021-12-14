@@ -20,6 +20,7 @@ class ActionController extends Controller
         $action = new Action();                      
         $action->goal_id = $request->goal_id;        
         $action->time = $request->time;        
+        $action->activity_id = $request->activity_id;  
         $action->save();
 
         return $action;

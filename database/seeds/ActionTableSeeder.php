@@ -39,25 +39,25 @@ class ActionTableSeeder extends Seeder
         Action::create([
             'goal_id'=> 1,
             'activity_id'=> 1,
-            'time'=> 300
+            'time'=> 15
         ]);
 
         Action::create([
             'goal_id'=> 1,
             'activity_id'=> 2,
-            'time'=> 300
+            'time'=> 15
         ]);
 
         Action::create([
             'goal_id'=> 1,
             'activity_id'=> 3,
-            'time'=> 300
+            'time'=> 15
         ]);
 
         Action::create([
             'goal_id'=> 1,
             'activity_id'=> 4,
-            'time'=> 300
+            'time'=> 15
         ]);
 
         /*******************************/

@@ -15,6 +15,7 @@ return array(
     'App\\Core\\Domain\\Progress' => $baseDir . '/app/Core/Domain/Progress.php',
     'App\\Core\\Repository\\ActivityRepository' => $baseDir . '/app/Core/Repository/ActivityRepository.php',
     'App\\Core\\Repository\\GoalRepository' => $baseDir . '/app/Core/Repository/GoalRepository.php',
+    'App\\Core\\Repository\\IActivity' => $baseDir . '/app/Core/Repository/IActivity.php',
     'App\\Core\\Repository\\IGoal' => $baseDir . '/app/Core/Repository/IGoal.php',
     'App\\Core\\Repository\\IObjective' => $baseDir . '/app/Core/Repository/IObjective.php',
     'App\\Core\\Repository\\IProgress' => $baseDir . '/app/Core/Repository/IProgress.php',

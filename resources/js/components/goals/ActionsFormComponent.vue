@@ -16,11 +16,14 @@
                     </div>
 
                     <div class="form-group col-md-4">
-                        <label for="">Actividad</label>
+                        <label for="">Actividad </label>
+                        <button type="button" class="btn btn-secondary btn-sm float-right" v-on:click="showFormActivity">
+                            <i class="bi-plus-circle-fill"></i> 
+                        </button>
                         <select name="activity_id" v-model="activity" class="form-select form-control">                            
                             <option v-for="item in activities" :value="item" :key="item.id">{{ item.description }}</option>                        
                         </select>
-                        <button type="button" class="btn btn-primary btn-sm float-right" v-on:click="showFormActivity">+</button> 
+                        
                     </div>
 
                     <div class="form-group col-md-4">
@@ -90,6 +93,7 @@ import { eventBus } from '../../app';
                 let params = {                                        
                     options: this.fieldAditional,
                     goal_id: this.goal.id,
+                    activity_id: this.activity.id,
                     time: this.timeSelected.id
 
                 }                

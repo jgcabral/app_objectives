@@ -12,3 +12,7 @@ services:
 
     ports:
       - ${DB_PORT}:3306
+    volumes:
+    # By default, there is the latest version of the application already present in the container
+    # If you want to provider the container with your own .war file, uncomment the following line
+    - ./bd:/bd
