@@ -1,0 +1,1000 @@
+  251  make init
+  252  make start
+  253  ifconfig
+  254  curl -X POST -F 'url=https://9b0eef288144.ngrok.io /telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  255  curl -X POST -F 'url=https://9b0eef288144.ngrok.io /telegrm' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  256  curl -X POST -F 'url=https://9b0eef288144.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  257  curl -X POST -F 'url=https://b31a2dcc3398.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  258  curl -X POST -F 'url=https://b31a2dcc3398.ngrok.io/telegram' https://api.telegg/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  259  curl -X POST -F 'url=https://2b18627216c7.ngrok.io/telegram' https://api.telegg/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  260  curl -X POST -F 'url=https://2b18627216c7.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  261  curl -X POST -F 'url=https://2b18627216c7.ngrok.io/telegram' https://api.telegram.org/bot1734529182RM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  262  curl -X POST -F 'url=https://d36fd61b15aa.ngrok.io/telegram' https://api.telegram.org/bot1734529182RM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  263  git branch
+  264  git fetch origin
+  265  git branch -a
+  266  git checkout -b fix_validation_member_exists
+  267  git config --global user.name "Gabriel Cabral"
+  268  git config --global user.email juan.cabral@osanasalud.com
+  269  git push origin fix_validation_member_exists 
+  270  php artisan corona-call:register-doctor
+  271  git status
+  272  git push origin fix_validation_member_exists 
+  273  git branch 
+  274  php artisan corona-call:register-doctor
+  275  locate *.mkv
+  276  ./ngrok http 8000
+  277  curl -X POST -F 'url=https://d36fd61b15aa.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  278  make start
+  279  git checkout master
+  280  git pull origin master
+  281  git checkout develop 
+  282  git checkout master
+  283  git checkout develop 
+  284  git checkout master
+  285  git checkout develop 
+  286  git fetch origin
+  287  git status
+  288  history
+  289  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 output.mkv
+  290  curl -X POST -F 'url=https://285f11e2d758.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  291  ./ngrok http 8000
+  292  ls
+  293  cd ls -lac
+  294  ls -lac
+  295  make start
+  296  curl -X POST -F 'url=https://6e6ed28c616f.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  297  ls -lac
+  298  sh clean_build.sh 
+  299  locate CMakeLists.txt
+  300  nano src/cmd/CMakeLists.txt 
+  301  locate Missing library: curl
+  302  locate CMake Error at CMakeLists.txt
+  303  grep CMake Error 
+  304  grep -i CMake Error 
+  305  grep -rnw '/home/gabriel/' -e 'CMake Error'
+  306  sudo apt update
+  307  sudo apt install mysql-workbench-community
+  308  mv /etc/apt/preferences.d/nosnap.pref /etc/apt/preferences.d/nosnap.pref.bkp
+  309  sudo mv /etc/apt/preferences.d/nosnap.pref /etc/apt/preferences.d/nosnap.pref.bkp
+  310  sudo snap install mysql-workbench-community
+  311  mysql-workbench-community
+  312  git checkout fix_validation_member_exists
+  313  history > historial.txt
+  314  78  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 andres.mkv
+  315  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 andres.mkv
+  316  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 andres1.mkv
+  317  sudo snap install barrier-maxiberta
+  318  sudo snap install barrier
+  319  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 andres2.mkv
+  320  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 corona.mkv
+  321  curl -X POST -F 'url=https://535093d80023.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  322  curl -X POST -F 'url=https://14d6cfdde254.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  323  make start
+  324  php artisan 
+  325  php artisan migrate
+  326  git status
+  327  curl -X POST -F 'url=https://5e2701dafeba.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  328  ./ngrok http 8000
+  329  curl -X POST -F 'url=https://26dfe252b1d5.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  330  curl -X POST -F 'url=https://7022d282cbea.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  331  make start
+  332  curl -X POST -F 'url=https://7a3fca7414de.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  333  curl -X POST -F 'url=https://3746d125b641.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  334  git push origin feature/modificacion_arbol 
+  335  ls
+  336  git status
+  337  git branch -m feature/registrar_financiador feature/modificacion_arbol
+  338  git push origin feature/modificacion_arbol
+  339  make start
+  340  curl -X POST -F 'url=https://843dc07b7b4a.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  341  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 charu.mkv
+  342  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 charu1.mkv
+  343  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 charu5.mkv
+  344  ffmpeg -i charu.mkv -ss 00:02:00 - 00:01:00 -vcopy -acopy ou.mkv
+  345  ffmpeg -i charu.mkv -ss 00:02:00 - 00:01:00 -acodec copy -vcodec copy ou.mkv
+  346  ffmpeg -i charu.mkv -ss 00:02:00 - 00:01:00 -async 1 ou.mkv
+  347  ffmpeg -i charu.mkv -ss 00:02:00 -t 00:01:00 c:v copy -c:a copy trim_ipseek_copy.mp4
+  348  ffmpeg -i charu.mkv -ss 00:02:00 -t 00:01:00 -c:v copy -c:a copy trim_ipseek_copy.mp4
+  349  ffmpeg -i charu.mkv -ss 00:02:30 -t 00:01:00 -c:v copy -c:a copy trim_ipseek_copy.mp4
+  350  ffmpeg -i charu.mkv -ss 00:02:15 -t 00:00:20 -c:v copy -c:a copy trim_ipseek_copy.mp4
+  351  ffmpeg -i charu.mkv -ss 00:02:20 -t 00:00:20 -c:v copy -c:a copy trim_ipseek_copy.mp4
+  352  ffmpeg -i charu.mkv -ss 00:02:17 -t 00:00:20 -c:v copy -c:a copy trim_ipseek_copy.mp4
+  353  ffmpeg -i charu.mkv -ss 00:02:19 -t 00:00:20 -c:v copy -c:a copy trim_ipseek_copy.mp4
+  354  ffmpeg -i charu.mkv -ss 00:02:18 -t 00:00:20 -c:v copy -c:a copy trim_ipseek_copy.mp4
+  355  ffmpeg -i charu.mkv -ss 00:02:18.600 -t 00:00:20 -c:v copy -c:a copy trim_ipseek_copy.mp4
+  356  ffmpeg -i charu.mkv -ss 00:02:19 -t 00:00:20 -c:v copy -c:a copy trim_ipseek_copy1.mp4
+  357  ffmpeg -i charu.mkv -ss 00:02:18 -t 00:00:20 -c:v copy -c:a copy trim_ipseek_copy2.mp4
+  358  ffmpeg -i charu.mkv -ss 00:02:18 -to 00:00:20 -c:v copy -c:a copy trim_ipseek_copy3.mp4
+  359  ffmpeg -i charu.mkv -ss 00:02:18 -to 00:02:30 -c:v copy -c:a copy trim_ipseek_copy3.mp4
+  360  ffmpeg -i charu.mkv -ss 00:02:20 -to 00:02:30 -c:v copy -c:a copy trim_ipseek_copy3.mp4
+  361  ffmpeg -i charu.mkv -ss 00:02:19 -to 00:02:35 -c:v copy -c:a copy trim_ipseek_copy4.mp4
+  362  ./ngrok http 8000
+  363  git checkout develop 
+  364  git pull origin develop 
+  365  git checkout -b feature/tooltip
+  366  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 put.mkv
+  367  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 tech.mkv
+  368  make start
+  369  php artisan corona-call:register-doctor
+  370  updatedb
+  371  sudo updatedb
+  372  locate *.mkv
+  373  sudo updatedb
+  374  locate *.mkv
+  375  make start
+  376  php artisan
+  377  git push origin feature/tooltip 
+  378  make start
+  379  git push origin feature/tooltip
+  380  php artisan
+  381  php artisan make:model 
+  382  php artisan make:model --help
+  383  php artisan make:model -p  Case
+  384  php artisan make:model -p --help
+  385  php artisan make:model Case
+  386  php artisan make:model OsanaSalud\Platform\Modules\CoronaCall\Models\Case
+  387  php artisan make:model app\modules\corona-call\source\Models\Case
+  388  php artisan make:model app/modules/corona-call/source/Models/Case
+  389  php artisan make:model OsanaSalud\Platform\Modules\Models\Case
+  390  php artisan make:model \OsanaSalud\Platform\Modules\Models\Case
+  391  php artisan make:model \OsanaSalud\Platform\Modules\Models\Case\Case
+  392  php artisan make:model "\OsanaSalud\Platform\Modules\Models\Case"
+  393  php artisan make:model "OsanaSalud\Platform\Modules\Models\Case"
+  394  php artisan make:model "Modules\Models\Case"
+  395  php artisan make:model "OsanaSalud\Platform\Modules\CoronaCall\Models\Case"
+  396  php artisan make:model "Models\Case"
+  397  php artisan make:model Models\Case
+  398  php artisan make:model "OsanaSalud\Platform\Modules\CoronaCall\Models\Case"
+  399  php artisan make:model "OsanaSalud/Platform/Modules/corona-call/Models/Case"
+  400  php artisan make:model "App/Platform/Modules/corona-call/Models/Case"
+  401  php artisan make:model "App\Platform\Modules\CoronaCall\Models\Case"
+  402  php artisan make:model "OsanaSalud\Platform\Application\Modules\CoronaCall\Models\Case"
+  403  php artisan make:model "OsanaSalud\Platform\Modules\CoronaCall\Models\Case"
+  404  php artisan make:model "OsanaSalud\\Platform\\Modules\\CoronaCall\\Models\\Case"
+  405  php artisan make:model "app\\modules\\corona-call\\Models\\Case"
+  406  php artisan make:model "app\\modules\\Case"
+  407  php artisan make:model "app/modules/Case"
+  408  php artisan make:model "modules/Case"
+  409  php artisan make:model "modules\Case"
+  410  php artisan make:model "modulesCase"
+  411  php artisan make:model "Case"
+  412  php artisan make:model "modules\Case"
+  413  composer dump-autoload
+  414  php artisan make:model "modules\Case"
+  415  php artisan make:model Case --path=/pmodules/corona-call/source/Models
+  416  php artisan make:model Case
+  417  git status
+  418  git push origin feature/tooltip
+  419  git status
+  420  git branch -a
+  421  git checkout feature/modificacion_arbol
+  422  git push origin feature/modificacion_arbol
+  423  curl -X POST -F 'url=https://3fe0-190-193-238-83.ngrok.io/telegram' https://api.telegram.org/bot1734529182:AAFZznsRM7RvoA6c4WKuPuE47hO5FHYsz5M/setWebhook
+  424  ./ngrok http 8000
+  425  updatedb
+  426  sudo updatedb
+  427  locate workbench
+  428  clear
+  429  sudo /var/lib/snapd/desktop/applications/mysql-workbench-community_mysql-workbench-community.desktop /snap/bin/mysql-workbench-community
+  430  touch .zshrc
+  431  nano .zshrc 
+  432  rm .zshrc 
+  433  nano .zshrc 
+  434  https://gitlab.com/code-stats/code-stats-zsh.git
+  435  git clone https://gitlab.com/code-stats/code-stats-zsh.git
+  436  cd code-stats-zsh/
+  437  s
+  438  ls
+  439  ls -lac
+  440  sudo chmod 777 codestats.plugin.zsh 
+  441  sh codestats.plugin.zsh
+  442  zgen load https://gitlab.com/code-stats/code-stats-zsh.git
+  443  sudo apt-get install zsh -y
+  444  zgen load https://gitlab.com/code-stats/code-stats-zsh.git
+  445  zsh –version
+  446  sudo apt-get install zsh -y
+  447  mv /etc/apt/preferences.d/nosnap.pref.bkp /etc/apt/preferences.d/nosnap.pref.bkp1 
+  448  sudo mv /etc/apt/preferences.d/nosnap.pref.bkp /etc/apt/preferences.d/nosnap.pref.bkp1 
+  449  sudo apt-get install zsh -y
+  450  sudo rm /etc/apt/preferences.d/nosnap.pref.bkp 
+  451  sudo rm /etc/apt/preferences.d/nosnap.pref.bkp1 
+  452  sudo apt-get install zsh -y
+  453  zgen load https://gitlab.com/code-stats/code-stats-zsh.git
+  454  zsh –version
+  455  sudo apt-get update
+  456  sudo apt install wget curl git -y
+  457  sudo apt-get install zsh -y
+  458  zsh –version
+  459  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  460  zsh –version
+  461  sudo apt install zsh
+  462  chsh -s $(which zsh)
+  463  su
+  464  zplug "code-stats/code-stats-zsh", from:gitlab, use:"codestats.plugin.zsh"
+  465  git status
+  466  git bramch -a
+  467  git branch -a
+  468  git checkout feature/tooltip
+  469  git push origin feature/tooltip
+  470  git checkout develop
+  471  git pull origin develop
+  472  make start
+  473  git push origin feature/tooltip 
+  474  git pull origin feature/tooltip 
+  475  git push origin feature/tooltip 
+  476  php artisan corona-call:register-doctor;
+  477  git status
+  478  git pull origin develop 
+  479  php artisan corona-call:register-doctor;
+  480  git push origin develop 
+  481  git pull origin develop 
+  482  git push origin develop 
+  483  git checkout feature/tooltip 
+  484  git pull origin develop 
+  485  make start
+  486  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i 0 test_corona_c.mkv
+  487  sudo add-apt-repository ppa:c.falco/mame
+  488  sudo apt-get update
+  489  sudo apt-get install mame
+  490  mkdir -p ~/mame/roms
+  491  mame
+  492  mame}
+  493  mame
+  494  meme
+  495  mame
+  496  locate hsbc
+  497  ifconfig
+  498  git fetch origin
+  499  git checkout revision-trait
+  500  nano .git/config
+  501  cd ..
+  502  mv sanatorio-guemes-notifications/ sanatorio-guemes-notifications2
+  503  git clone git@gitlab.com:osana-salud/clients/sg/notifications.git
+  504  cd notifications/
+  505  make start
+  506  cd ..
+  507  cd sanatorio-guemes-notifications2/
+  508  ls
+  509  git remote set-url origin https://gitlab.com/osana-salud/clients/sg/notifications.git
+  510  git fetch origin
+  511  git checkout revision-trait 
+  512  git stash 
+  513  git checkout revision-trait 
+  514  composer test
+  515  composer dump-autoload
+  516  composer test
+  517  git push origin revision-trait
+  518  composer test
+  519  updatedb
+  520  sudo updatedb
+  521  locate zsh
+  522  history
+  523  composer test
+  524  git pull origin revision-trait 
+  525  git remote set-url origin git@gitlab.com:osana-salud/clients/sg/notifications.git
+  526  git pull origin revision-trait 
+  527  composer test
+  528  clear
+  529  git pull origin develop
+  530  git branch
+  531  git checkout develop 
+  532  git pull origin develop
+  533  composer tet
+  534  composer test
+  535  make start
+  536  git pull origin develop
+  537  make start
+  538  git checkout -b bugfix/appointment_field_schedueled
+  539  php artisan 
+  540  php artisan api:register-client
+  541  git checkout develop
+  542  git checkout -b bugfix/sg-471
+  543  git checkout develop
+  544  git checkout -b bugfix/sg-480
+  545  git branch
+  546  git checkout bugfix/appointment_field_schedueled 
+  547  php artisan migrate
+  548  sudo cp -r roms/ /usr/share/games/mame
+  549  locate roms
+  550  make start
+  551  git branch
+  552  php artisan 
+  553  clear
+  554  git checkout develop
+  555  git checkout -b sg-473
+  556  sudo cp kinst.chd /usr/share/games/mame/roms/
+  557  cd /usr/share/games/mame/
+  558  ls
+  559  cd roms
+  560  ls
+  561  sudo rm kinst.chd 
+  562  sudo rm -rf kinst.chd 
+  563  ls
+  564  sudo rm -rf kinst
+  565  ls
+  566  cd /usr/local/games/mame
+  567  cd /usr/local/games
+  568  ls -lac
+  569  locate roms
+  570  cd /usr/share/games/roms
+  571  cd /usr/share/games/mame/roms
+  572  ls
+  573  cd ..
+  574  ls
+  575  updatedb
+  576  sudo updatedb
+  577  locate roms
+  578  make start
+  579  git branch
+  580  git checkout bugfix/appointment_field_schedueled 
+  581  composer test
+  582  clear
+  583  git branch bugfix/appointment_field_schedueled fix/appointment_field_schedule
+  584  git branch -m bugfix/appointment_field_schedueled fix/appointment_field_schedule
+  585  clear
+  586  git branch
+  587  git push origin fix/appointment_field_schedule 
+  588  composer test
+  589  git branch
+  590  git checkout bugfix/sg-480
+  591  git stash
+  592  git checkout bugfix/sg-480
+  593  git branch -m fix/appointment_field_speciality
+  594  git push origin fix/appointment_field_speciality 
+  595  composer test
+  596  composer test}
+  597  composer test
+  598  git branch 
+  599  git checkout fix/appointment_field_schedule 
+  600  git checkout develop
+  601  git pull origin develop 
+  602  git checkout -b fix/no_id
+  603  git checkout develop 
+  604  git checkout fix/no_id 
+  605  git checkout develop 
+  606  git checkout -b fix/future_schedule
+  607  git push origin fix/future_schedule
+  608  git branch
+  609  git push origin fix/no_id
+  610  composer test
+  611  wget -O deleteMeLater.tmp https://www.youtube.com/watch?v=pE5ONnCcn5E
+  612  ls
+  613  wget https://www.youtube.com/watch?v=pE5ONnCcn5E
+  614  wget https://www.youtube.com/watch?v=pE5ONnCcn5E ddd
+  615  make start
+  616  git branch
+  617  git checkout develop 
+  618  git checkout -b fix/phone_quality_not
+  619  git push origin fix/phone_quality_not
+  620  composer test
+  621  git checkout develop 
+  622  git pull origin develop 
+  623  git checkout -b feat/add-message-procedure-notification
+  624  git branch
+  625  git checkout fix/no_id 
+  626  composer test
+  627  git checkout fix/phone_quality_not 
+  628  composer test
+  629  git branch
+  630  git checkout feat/add-message-procedure-notification 
+  631  git checkout fix/phone_quality_not 
+  632  git push origin fix/phone_quality_not 
+  633  git branch
+  634  git checkout feat/add-message-procedure-notification 
+  635  git checkout fix/no_id
+  636  composet test
+  637  composer test
+  638  git checkout fix/phone_quality_not
+  639  git branch
+  640  git push origin feat/add-message-procedure-notification 
+  641  git push origin feat/add-message-procedure-notification 
+  642  git branch
+  643  make start
+  644  git branch
+  645  git checkout feat/add-message-procedure-notification 
+  646  git fetch origin
+  647  git checkout feat/add-procedure-type 
+  648  git checkout feat/add-message-procedure-notification 
+  649  git merge feat/add-procedure-type 
+  650  git branch
+  651  git push origin feat/add-message-procedure-notification 
+  652  git checkout develop
+  653  git pull origin develop
+  654  locate pass
+  655  locate hsbc
+  656  git branch
+  657  git checkout feat/add-message-procedure-notification
+  658  git checkout develop -- modules/chatbot/source/Conversations/Appointments/ReminderAppointmentConversation.php
+  659  git pull origin develop 
+  660  git checkout develop -- modules/chatbot/source/Conversations/Appointments/ReminderAppointmentConversation.php
+  661  git branch
+  662  git checkout develop 
+  663  git branch -D feat/add-message-procedure-notification
+  664  git pull origin develop 
+  665  git checkout -b feat/add-message-procedure-notification
+  666  git fetch origin
+  667  git checkout develop 
+  668  git pull origin develop 
+  669  git branch
+  670  git checkout feat/add-message-procedure-notification
+  671  git pull origin develop
+  672  git push origin feat/add-message-procedure-notification
+  673  git pull origin feat/add-message-procedure-notification
+  674  git push origin feat/add-message-procedure-notification
+  675  git branch
+  676  git checkout develop
+  677  git pull
+  678  git branch
+  679  git checkout -b feat/add-test-procedure-notificaction
+  680  composer test
+  681  git stash
+  682  git checkout develop 
+  683  composer test
+  684  git pull
+  685  composet test
+  686  composer test
+  687  git branch
+  688  composer test
+  689  git pull origin develop
+  690  composer dump
+  691  composer test
+  692  clear
+  693  git checkout qa
+  694  git branch -d develop 
+  695  git checkout develop 
+  696  git status
+  697  composer dump
+  698  composer test
+  699  make start
+  700  composer test
+  701  git branch
+  702  git checkout feat/add-test-procedure-notificaction 
+  703  git stash pop
+  704  composer test
+  705  composer test}
+  706  composer test
+  707  composer test}
+  708  composer test
+  709  cd ..
+  710  cd notifications/
+  711  php artisan
+  712  cd ..
+  713  cd  notifications/
+  714  php artisan
+  715  git push origin feat/add-test-procedure-notificaction 
+  716  php artisan
+  717  cd ..
+  718  composer require laravel/installer
+  719  ls
+  720  cd app-seguimiento/
+  721  composer require laravel/installer
+  722  laravel new app-seguimiento
+  723  ls
+  724  composer global require laravel/installer
+  725  ls
+  726  laravel new
+  727  cd ..
+  728  cd .config
+  729  cd composer/
+  730  vendor/
+  731  ls
+  732  composer install
+  733  ls
+  734  cd vendor/
+  735  ls
+  736  cd bin/
+  737  ls
+  738  composer global about
+  739  laravel new
+  740  cd $HOME
+  741  cd docuemnts
+  742  cd docuemntos
+  743  ls
+  744  cd Documentos/
+  745  cd app-seguimiento/
+  746  ls 
+  747  clea
+  748  composer create-project --prefer-dist laravel/laravel app-seguimiento "6.0"
+  749  ls
+  750  cd app-seguimiento/
+  751  ls
+  752  php artisan
+  753  cd ..
+  754  cd notifications/
+  755  php artisan
+  756  ls
+  757  php artisan
+  758  cd ..
+  759  cd app-seguimiento/
+  760  php artisan
+  761  ls
+  762  cd app-seguimiento/
+  763  php artisan
+  764  cd ..
+  765  cd notifications/
+  766  php artisan
+  767  make start
+  768  make prepare
+  769  make start
+  770  php artisan 
+  771  php artisan make:migration
+  772  php artisan make:migration unities
+  773  php artisan make:migration unities_table
+  774  php artisan make:migration unities
+  775  php artisan make:migration tracking
+  776  php artisan make:migration level
+  777  php artisan make:migration create_unities
+  778  php artisan make:migration create_levels
+  779  php artisan make:migration create_trackings
+  780  php artisan make:migration create_levels
+  781  mysql
+  782  make prepare
+  783  make start
+  784  make prepare
+  785  locate php.ini
+  786  sudo nano /etc/php/7.4/apache2/php.ini
+  787  sudo nano /etc/php/7.4/cli/php.ini
+  788  php artisan make:migration create_levels
+  789  php artisan 
+  790  php artisan migration:fresh
+  791  php artisan migrate:fresh
+  792  make stop
+  793  make prepare
+  794  make start
+  795  make start
+  796  php artisan
+  797  php artisan migrate:fresh
+  798  make stop
+  799  make start
+  800  php artisan migrate:fresh
+  801  locate php.ini
+  802  nano /etc/php/7.4/cli/php.ini
+  803  php artisan
+  804  make stop
+  805  make start
+  806  mysql
+  807  php artisan migrate:fresh
+  808  php artisan
+  809  make stop
+  810  make prepare
+  811  make start
+  812  php artisan migrate:fresh
+  813  make stop
+  814  mkake prepare
+  815  make prepare
+  816  make start
+  817  make stop
+  818  make start
+  819  make prepare
+  820  history
+  821  make pepare
+  822  make prepare
+  823  ls
+  824  docker ps
+  825  docker logs
+  826  docker ps -a
+  827  docker images
+  828  make stop
+  829  mkae prepare
+  830  make prepare
+  831  make stop
+  832  make start
+  833  make prepare
+  834  make stop
+  835  docker ps
+  836  make prepare
+  837  ls
+  838  docker ps
+  839  make prepare
+  840  make prepare
+  841  make prepare
+  842  make prepare
+  843  ls
+  844  make prepare
+  845  php 
+  846  php artisan
+  847  composer install
+  848  history
+  849  composer create-project --prefer-dist laravel/laravel:6.20 app
+  850  cd app/
+  851  php artisan
+  852  history
+  853  composer create-project --prefer-dist laravel/laravel:6.20 app
+  854  make prepare
+  855  cd app
+  856  make prepare
+  857  php artisan
+  858  make prepare
+  859  cd ..}
+  860  cd ..
+  861  mkdir example
+  862  cd example/
+  863  composer create-project --prefer-dist laravel/laravel:6.20 app
+  864  cd app/
+  865  php artisan
+  866  cd ..
+  867  ls
+  868  cd app/
+  869  ls
+  870  php artisan config:clear
+  871  make prepare
+  872  php artisan jwt:secret
+  873  composer install
+  874  php artisan jwt:secret
+  875  composer install "tymon/jwt-auth": "^1.0"
+  876  composer install tymon/jwt-auth: ^1.0
+  877  make prepare
+  878  make start
+  879  make prepare
+  880  make start
+  881  docker-compose up -d
+  882  npm run local
+  883  make stop
+  884  make start
+  885  make prepare
+  886  make start
+  887  mkae start
+  888  make start
+  889  npm run local
+  890  make prepare
+  891  ls
+  892  cd ..
+  893  cd example/
+  894  ls
+  895  cd app/
+  896  php artisan 
+  897  php artisan
+  898  php artisan make:migration create_levels
+  899  php artisan migrate:fresh
+  900  make start
+  901  docker ps
+  902  docker images
+  903  docker rm 8b43c6af2ad0
+  904  docker rmi 8b43c6af2ad0
+  905  docker stop 8b43c6af2ad0
+  906  docker rmi -f 8b43c6af2ad0
+  907  docker ps
+  908  docker images
+  909  docker rmi -f 0716d6ebcc1a
+  910  docker images
+  911  docker rmi -f 8c47393caac4
+  912  docker images
+  913  docker rmi -f e3dd0e49bca5
+  914  docker images
+  915  docker ps
+  916  make prepare
+  917  make start
+  918  docker ps
+  919  docker images
+  920  make stop
+  921  make prepare
+  922  make start
+  923  docker ps
+  924  docker stop 3bd9b03ca8f0
+  925  docker rmi 3bd9b03ca8f0
+  926  docker rm 3bd9b03ca8f0
+  927  docker ps
+  928  docker prepare
+  929  make prepare
+  930  make start
+  931  php artisan 
+  932  make prepare
+  933  make start
+  934  docker ps
+  935  docker images
+  936  docker images
+  937  docker ps
+  938  cd ..
+  939  cd seguimiento/
+  940  cd app/
+  941  docker-compose up -d
+  942  docker ps
+  943  make prepare
+  944  make start
+  945  make stop
+  946  docker ps
+  947  docker images
+  948  docker rm 8b43c6af2ad0
+  949  docker rmi 8b43c6af2ad0
+  950  docker rmi -f 8b43c6af2ad0
+  951  docker images
+  952  make prepare
+  953  make start
+  954  docker ps
+  955  docker stop
+  956  make stop
+  957  cd ..
+  958  cd  seguimiento/
+  959  cd app/
+  960  docker ps
+  961  docker images
+  962  cd ..
+  963  cd  seguimiento/
+  964  cd app/
+  965  make prepare
+  966  make start
+  967  docker ps
+  968  docker-compose up -d
+  969  cd ..
+  970  cd seguimiento/app/
+  971  docker-compose up -d
+  972  make stop
+  973  make prepare
+  974  make start
+  975  docker ps
+  976  sudo docker run -d --name seguimiento_app 4c77e56983ab
+  977  cd ..
+  978  cd seguimiento/
+  979  ls -lac
+  980  cd app/
+  981  ls -lac
+  982  docker-compose up -d
+  983  docker images
+  984  docker ps
+  985  docker images
+  986  docker rmi 8b43c6af2ad0 --remove-orphans
+  987  docker rm 8b43c6af2ad0 --remove-orphans
+  988  docker-composer down
+  989  docker-compose down
+  990  docker rm -f $(docker ps -a -q)
+  991  docker volume rm $(docker volume ls -q)
+  992  docker ps
+  993  docker images}
+  994  docker images
+  995  docker rm 8b43c6af2ad0
+  996  docker rmi} 8b43c6af2ad0
+  997  docker rmi 8b43c6af2ad0
+  998  docker images
+  999  docker rmi 5da013e07658
+ 1000  docker images
+ 1001  docker ps
+ 1002  docker images
+ 1003  ls
+ 1004  docker-compose up -d
+ 1005  docker ps
+ 1006  docker images
+ 1007  docker-compose up -d
+ 1008  docker ps
+ 1009  docker images
+ 1010  docker run 8b43c6af2ad0
+ 1011  make prepare
+ 1012  make start
+ 1013  cd ..
+ 1014  cd seguimiento/app/
+ 1015  docker-compose up -d
+ 1016  docker ps
+ 1017  docker images
+ 1018  docker run 8b43c6af2ad0
+ 1019  docker images
+ 1020  docker start 8b43c6af2ad0
+ 1021  docker ps -a
+ 1022  docker start app_mysqldb_1 
+ 1023  docker ps
+ 1024  docker ps -a
+ 1025  docker-compose ud
+ 1026  docker-compose logs
+ 1027  docker-compose version
+ 1028  docker-compose restart
+ 1029  docker-compose up -d
+ 1030  docker ps 
+ 1031  docker ps -a
+ 1032  docker-compose down
+ 1033  docker rm -f $(docker ps -a -q)
+ 1034  docker ps
+ 1035  docker images
+ 1036  docker volume rm $(docker volume ls -q)
+ 1037  ls -lac
+ 1038  docker-compose up -d
+ 1039  docker ps
+ 1040  docker run --name=app_db_1
+ 1041  docker run name=app_db_1
+ 1042  docker run --name="app_db_1"
+ 1043  docker imamges
+ 1044  docker images
+ 1045  docker run --name=app_db_1 -d 5.7
+ 1046  docker-compose up -d
+ 1047  docker ps
+ 1048  docker images
+ 1049  docker exec -it app_db_1 bash
+ 1050  docker-compose up -d
+ 1051  docker exec -it app_db_1 bash
+ 1052  docker images
+ 1053  docker run -it -d 8b43c6af2ad0
+ 1054  docker ps
+ 1055  docker ps -a
+ 1056  docker run -it -d "8b43c6af2ad0"
+ 1057  docker ps -a
+ 1058  docker start 8b43c6af2ad0
+ 1059  docker start 336c4eed437f
+ 1060  docker ps 
+ 1061  docker commit 336c4eed437f
+ 1062  docker run 6bd13d60c7c927dbd32f5eb680d24e88552a426307ad84bc7d096a12d0585722 bash
+ 1063  docker ps
+ 1064  docker ps -a
+ 1065  docker-compose down
+ 1066  docker volume rm $(docker volume ls -q)
+ 1067  docker images
+ 1068  docker rmi 6bd13d60c7c9
+ 1069  docker rmi 8b43c6af2ad0
+ 1070  docker ps -a
+ 1071  docker images
+ 1072  docker-compose  up -d
+ 1073  docker ps
+ 1074  docker logs 4e4914fe6d02
+ 1075  docker-compose up -d
+ 1076  docker-compose up -d}
+ 1077  docker-compose up -d
+ 1078  docker ps -a
+ 1079  docker ps
+ 1080  docker run -it f15a69d9238b bash
+ 1081  docker exec -it f15a69d9238b bash
+ 1082  docker-compose up -d
+ 1083  docker ps
+ 1084  docker exec -it be58a489cbfe bash
+ 1085  docker-compose up -d
+ 1086  docker ps
+ 1087  docker exec -it a7988b2645e4 bash
+ 1088  docker-compose down 
+ 1089  docker-compose up -d
+ 1090  docker ps
+ 1091  docker exec -it eedbedf234d8 bash
+ 1092  docker exec -it eedbedf234d8 /bin/bash
+ 1093  docker exec -it eedbedf234d8 bash
+ 1094  docker logs
+ 1095  docker logs eedbedf234d8
+ 1096  docker-compose --env-file .env up -d
+ 1097  docker logs eedbedf234d8
+ 1098  docker-compose down
+ 1099  docker-compose --env-file .env up -d
+ 1100  docker logs eedbedf234d8
+ 1101  docker ps
+ 1102  docker ps -a
+ 1103  docker logs eedbedf234d8
+ 1104  docker exec -it fbf2ec983138 bash
+ 1105  docker ps
+ 1106  docker-compose down
+ 1107  docker-compose --env-file .env up -d
+ 1108  docker logs app_db_1
+ 1109  docker-compose down
+ 1110  docker-compose --env-file .env up -d
+ 1111  docker ps
+ 1112  docker exec -it app_db_1 bash
+ 1113  docker-compose --env-file .env up -d
+ 1114  docker ps
+ 1115  docker exec -it app_db_1 bash
+ 1116  docker exec -it app_db_1 mysql -uroot -p
+ 1117  docker logs mysqli 2>&1 | grep GENERATED
+ 1118  docker-compose down
+ 1119  docker-compose up -d
+ 1120  docker exec -it app_db_1 mysql -uroot -padmin
+ 1121  docker ps
+ 1122  docker images
+ 1123  sudo synaptic
+ 1124  php -v
+ 1125  php artisan migrate:fresh
+ 1126  docker ps
+ 1127  make prepare
+ 1128  make start
+ 1129  docker exec -it notifications_mariadb_1 bash
+ 1130  php artisn
+ 1131  php artisan
+ 1132  php artisan migrate:fresh
+ 1133  make start
+ 1134  mkae stop
+ 1135  make stop
+ 1136  php artisan migrate:fresh
+ 1137  docker ps
+ 1138  docker ps -a
+ 1139  docker logs app_db_1
+ 1140  ls
+ 1141  docker ps -a
+ 1142  docker logs notifications_mariadb_1 
+ 1143  make prepare
+ 1144  make start
+ 1145  php artisan
+ 1146  php artisan admin:register-user
+ 1147  php artisan migrate:fresh
+ 1148  php artisan admin:register-user
+ 1149  php artisan 
+ 1150  php artisan api:register-client
+ 1151  git branch
+ 1152  git pull
+ 1153  git pull feat/add-test-procedure-notificaction
+ 1154  git pull origin feat/add-test-procedure-notificaction
+ 1155  make start
+ 1156  git branch
+ 1157  sudo apt-get install libimage-exiftool-perl
+ 1158  composer test
+ 1159  git branch
+ 1160  git push origin feat/add-test-procedure-notificaction 
+ 1161  exiftool Video\ from\ Gabriel 
+ 1162  exiftool -all Video\ from\ Gabriel 
+ 1163  make init
+ 1164  make prepare
+ 1165  php artisan migrate:fresh
+ 1166  php artisan 
+ 1167  php artisan admin:register-user
+ 1168  php artisan route:list
+ 1169  git checkoput develop
+ 1170  git checkout develop
+ 1171  git pull origin develop 
+ 1172  php artisan migrate
+ 1173  make start
+ 1174  cd Documentos/
+ 1175  ls
+ 1176  composer 
+ 1177  composer create-project --prefer-dist laravel/laravel:6.2 app-track
+ 1178  php artisan make:auth
+ 1179  cd app-track/
+ 1180  php artisan make:auth
+ 1181  php artisan migrate
+ 1182  mysql 
+ 1183  make prepare
+ 1184  make start
+ 1185  docker ps
+ 1186  docker stop corona-call_mariadb_1 
+ 1187  make start
+ 1188  docker ps -a
+ 1189  docker logs app-track_mariadb_1 
+ 1190  make start
+ 1191  make prepare
+ 1192  make start
+ 1193  docker ps
+ 1194  docker ps -a
+ 1195  docker rmi ad68669a5953
+ 1196  docker rm ad68669a5953
+ 1197  docker ps -a
+ 1198  docker rm fd17ad0acd0a
+ 1199  docker ps -a
+ 1200  docker rm 4e2ee8e356a8
+ 1201  docker ps -a
+ 1202  docker images
+ 1203  make prepare
+ 1204  make start
+ 1205  docker ps
+ 1206  php artisan migrate
+ 1207  php artisan ui vue --auth
+ 1208  composer require laravel/ui "^1.0" --dev
+ 1209  php artisan ui vue --auth
+ 1210  npm install && npm run dev
+ 1211  make start
+ 1212  npm run dev
+ 1213  make prepare
+ 1214  npm run dev
+ 1215  make prepare
+ 1216  make start
+ 1217  npm run dev
+ 1218  make prepare
+ 1219  make start
+ 1220  npm run dev
+ 1221  make prepare
+ 1222  npm run dev
+ 1223  make start
+ 1224  php artisan serve
+ 1225  npm run watch
+ 1226  php artisan make:migration create_levels
+ 1227  php artisan migration:fresh
+ 1228  php artisan migrate:fresh
+ 1229  php artisan 
+ 1230  php artisan make:resource
+ 1231  php artisan make:resource level
+ 1232  php artisan make:contoller LevelController
+ 1233  php artisan make:controller LevelController
+ 1234  php artisan make:controller LevelController --resource
+ 1235  php artisan make:model Level -m
+ 1236  php artisan make:seeder UserTableSeeder
+ 1237  composer test
+ 1238  php artisan
+ 1239  php artisan make:test
+ 1240  php artisan make:test LevelAddTest
+ 1241  composer test
+ 1242  make start
+ 1243  docker ps
+ 1244  docker logs app-track_mariadb_1 
+ 1245  npm run dev
+ 1246  php artisan serve
+ 1247  npm run dev
+ 1248  npm run watch
+ 1249  history
+ 1250  history > log
