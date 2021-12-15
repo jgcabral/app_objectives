@@ -9,12 +9,14 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ObjectiveRepository implements IObjective{
-    function all(): Collection{
+    function allMyObjectives(): Collection{
 
-        return Objective::all();
+        return Objective::select(['objectives.id', 'objectives.description'])  
+            ->where('objectives.user_id','=', Auth::user()->id)                           
+            ->get();
     }
 
-    function allMyObjectives(): Collection
+    function allMyObjectivesWithProgress(): Collection
     {
         
         return Objective::addSelect([
@@ -22,11 +24,9 @@ class ObjectiveRepository implements IObjective{
                                     ->join('actions','progress.action_id','actions.id') 
                                     ->join('goals','actions.goal_id','goals.id')                                                   
                                     ->whereColumn('goals.objective_id','objectives.id')
-            ])
-            ->join('goals','objectives.id','goals.objective_id')                                    
-            ->join('actions','goals.id','actions.goal_id')  
-            ->where('objectives.user_id','=', Auth::user()->id)
-            ->groupBy('progress')                           
+                                    
+            ])            
+            ->where('objectives.user_id','=', Auth::user()->id)                                      
             ->get();
     }
 }

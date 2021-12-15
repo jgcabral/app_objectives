@@ -2169,8 +2169,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    _app__WEBPACK_IMPORTED_MODULE_0__["eventBus"].$on('showGoal', function (data) {
-      this.selectedObjective = data;
+    _app__WEBPACK_IMPORTED_MODULE_0__["eventBus"].$on('showGoal', function (data) {//this.selectedObjective = data;
     }.bind(this));
   },
   mounted: function mounted() {
@@ -2179,7 +2178,6 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/objectives').then(function (response) {
       _this.objectives = response.data;
     });
-    this.selectedObjective = this.objective.id;
   },
   methods: {
     newGoal: function newGoal() {
@@ -2190,8 +2188,7 @@ __webpack_require__.r(__webpack_exports__);
       };
       this.description = '';
       axios.post('/goals', params).then(function (response) {
-        var goal = response.data; //this.$emit('new', goal);
-
+        var goal = response.data;
         _app__WEBPACK_IMPORTED_MODULE_0__["eventBus"].$emit('newGoal', goal);
       });
     }
@@ -2301,23 +2298,31 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['objective'],
   data: function data() {
     return {
       goals: [],
-      showGoals: false
+      showGoals: false,
+      showGoalForm: true
     };
   },
   created: function created() {
     this.getGoals();
     _app__WEBPACK_IMPORTED_MODULE_1__["eventBus"].$on('addGoal', function (data) {
       this.showGoals = true;
+      this.showGoalForm = true;
       this.objectiveSelected = data;
     }.bind(this));
     _app__WEBPACK_IMPORTED_MODULE_1__["eventBus"].$on('newGoal', function (data) {
       this.showGoals = true;
+      this.showGoalForm = false;
       this.getGoals();
     }.bind(this));
   },
@@ -2343,6 +2348,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
+    },
+    showFormGoal: function showFormGoal() {
+      this.showGoalForm = true;
     }
   }
 });
@@ -2429,7 +2437,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       showAct: false,
       objectiveSelected: null,
       goalSelected: null,
-      show: true
+      show: true,
+      showObjectives: true
     };
   },
   created: function created() {
@@ -2441,7 +2450,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     _app__WEBPACK_IMPORTED_MODULE_1__["eventBus"].$on('newProgress', function (data) {
       var _this = this;
 
-      axios.get('/myobjectives').then(function (response) {
+      axios.get('/myobjectiveswithprogress').then(function (response) {
         _this.objectives = response.data;
         _this.goalHasActions = false;
         _this.objectiveHasGoals = true;
@@ -2499,7 +2508,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return axios.get('/myobjectives').then(function (response) {
+                return axios.get('/myobjectiveswithprogress').then(function (response) {
                   _this3.objectives = response.data;
                 });
 
@@ -2673,6 +2682,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../app */ "./resources/js/app.js");
 //
 //
 //
@@ -2688,6 +2698,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['objective'],
   data: function data() {
@@ -39661,7 +39672,7 @@ var render = function () {
           _c("div", { staticClass: "form-row" }, [
             _c("div", { staticClass: "form-group col-md-4" }, [
               _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                _vm._v("Meta"),
+                _vm._v("Descripción"),
               ]),
               _vm._v(" "),
               _c("input", {
@@ -39754,11 +39765,7 @@ var render = function () {
                     },
                   ],
                   staticClass: "form-select form-control",
-                  attrs: {
-                    name: "objective_id",
-                    required: true,
-                    disabled: "disabled",
-                  },
+                  attrs: { name: "objective_id" },
                   on: {
                     change: function ($event) {
                       var $$selectedVal = Array.prototype.filter
@@ -39778,13 +39785,7 @@ var render = function () {
                 _vm._l(_vm.objectives, function (item) {
                   return _c(
                     "option",
-                    {
-                      key: item.id,
-                      domProps: {
-                        value: item,
-                        selected: _vm.selectedObjective,
-                      },
-                    },
+                    { key: item.id, domProps: { value: item } },
                     [_vm._v(_vm._s(item.description))]
                   )
                 }),
@@ -39835,7 +39836,7 @@ var render = function () {
                     },
                   ],
                   staticClass: "form-select form-control",
-                  attrs: { name: "objective_id" },
+                  attrs: { name: "time_id" },
                   on: {
                     change: function ($event) {
                       var $$selectedVal = Array.prototype.filter
@@ -39960,7 +39961,23 @@ var render = function () {
           { staticClass: "list-group" },
           [
             _c("li", { staticClass: "list-group-item active" }, [
-              _vm._v("Metas para " + _vm._s(_vm.objective.description)),
+              _vm._v(
+                "\n                    Metas para " +
+                  _vm._s(_vm.objective.description) +
+                  "\n                    "
+              ),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-secondary btn-sm float-right",
+                  attrs: { type: "button" },
+                  on: { click: _vm.showFormGoal },
+                },
+                [
+                  _c("i", { staticClass: "bi-plus-circle-fill" }),
+                  _vm._v(" Meta\n                    "),
+                ]
+              ),
             ]),
             _vm._v(" "),
             _vm._l(_vm.goals, function (goal) {
@@ -39978,7 +39995,19 @@ var render = function () {
     _c(
       "div",
       { staticClass: "col-md-12" },
-      [_c("goal-form-component", { attrs: { objective: _vm.objective } })],
+      [
+        _c("goal-form-component", {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.showGoalForm,
+              expression: "showGoalForm",
+            },
+          ],
+          attrs: { objective: _vm.objective },
+        }),
+      ],
       1
     ),
   ])

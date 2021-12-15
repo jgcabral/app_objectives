@@ -16,28 +16,7 @@ class ObjectiveTableSeeder extends Seeder
             'description'=> 'Inglés - A2',   
             'user_id' => 1
         ]);
-
-        
-        Objective::create([
-            'description'=> 'Malagata - Luciernaga',   
-            'user_id' => 1
-        ]);
-        
-        Objective::create([
-            'description'=> 'Sombras - Triste Novela',   
-            'user_id' => 1
-        ]);
-
-        Objective::create([
-            'description'=> '7 Lunas - Costañera',   
-            'user_id' => 1
-        ]);
-
-        Objective::create([
-            'description'=> '7 Lunas - Loco Corazón',   
-            'user_id' => 1
-        ]);
-        
+                
 
     }
 }

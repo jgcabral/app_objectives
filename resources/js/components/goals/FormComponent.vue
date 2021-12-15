@@ -10,8 +10,8 @@
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="exampleInputEmail1">Objetivo</label>
-                        <select name="objective_id" v-model="objective" class="form-select form-control" :required="true"  disabled="disabled">                            
-                            <option v-for="item in objectives" :value="item" :key="item.id" :selected="selectedObjective">{{ item.description }}</option>                        
+                        <select name="objective_id" v-model="objective" class="form-select form-control">                            
+                            <option v-for="item in objectives" :value="item" :key="item.id">{{ item.description }}</option>                        
                         </select>
                     </div>
 
@@ -22,7 +22,7 @@
 
                     <div class="form-group col-md-4">
                         <label for="exampleInputEmail1">Estimacion</label>
-                        <select name="objective_id" v-model="approachSelected" class="form-select form-control">                            
+                        <select name="time_id" v-model="approachSelected" class="form-select form-control">                            
                             <option v-for="item in approachs" :value="item" :key="item.id">{{ item.description }}</option>                        
                         </select>
                     </div>
@@ -59,15 +59,14 @@ import { eventBus } from '../../app';
 
         created: function () {            
             eventBus.$on('showGoal', function (data) {                                        
-                this.selectedObjective = data;
+                //this.selectedObjective = data;
             }.bind(this));
         },
-        mounted() {            
+        mounted() {                        
             axios.get('/objectives').then((response) => {
                 this.objectives = response.data;          
-            });
-            this.selectedObjective = this.objective.id;
-            
+                
+            });                                    
         },
         methods:{
             
@@ -83,7 +82,7 @@ import { eventBus } from '../../app';
                 axios.post('/goals', params)
                     .then((response) => {
                         const goal = response.data;
-                        //this.$emit('new', goal);
+                        
                         eventBus.$emit('newGoal', goal);    
                     });
             }

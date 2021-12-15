@@ -28,7 +28,7 @@ Route::get('/actionsbygoal/{id_goal}', 'HomeController@actionsByGoal')->name('ac
 
 Route::get('/viewobjectives', 'HomeController@viewObjectives')->name('viewobjectives');
 
-Route::get('myobjectives', 'ObjectiveController@myObjectives');
+Route::get('myobjectiveswithprogress', 'ObjectiveController@myObjectivesWithProgress');
 
 Route::get('/progressbyobjective', 'HomeController@progressByObjective')->name('progressByObjective');
 

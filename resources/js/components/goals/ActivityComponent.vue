@@ -8,7 +8,7 @@
             <form action="" v-on:submit.prevent="newActivity()">
                <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="exampleInputEmail1">Meta</label>
+                        <label for="exampleInputEmail1">Descripción</label>
                         <input type="text" class="form-control form-control-sm" name="activity" v-model="description">
                     </div>
                     

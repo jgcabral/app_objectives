@@ -27,7 +27,7 @@ class ObjectiveController extends Controller
     public function index()
     {
         //return Objective::all();
-        return $this->iObjective->all();
+        return $this->iObjective->allMyObjectives();
 
     }
 
@@ -88,8 +88,8 @@ class ObjectiveController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function myObjectives()
+    public function myObjectivesWithProgress()
     {                
-        return $this->iObjective->allMyObjectives();                
+        return $this->iObjective->allMyObjectivesWithProgress(); 
     }
 }

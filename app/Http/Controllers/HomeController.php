@@ -4,18 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Core\Repository\IObjective;
+use Barryvdh\Debugbar\Facade as Debugbar;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    private $iObjective;
+
+    public function __construct(IObjective $objectiveRepository)
     {
+        $this->iObjective = $objectiveRepository;
         $this->middleware('auth');
     }
+    
 
     /**
      * Show the application dashboard.
@@ -24,7 +26,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $objectives = $this->iObjective->allMyObjectives();
+
+        if($objectives->contains(Auth::user()->id)){
+            return view('home');
+        }else{
+            return redirect('viewobjectives');
+        }
+        
+        
+
+        
     }
 
     public function viewObjectives()

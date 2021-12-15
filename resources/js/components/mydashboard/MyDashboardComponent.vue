@@ -12,11 +12,11 @@
                                 v-for="objective in objectives" 
                                     :key="objective.id"
                                     :objective="objective"
-                                    @show="showMyGoals">
-                            
-                            </my-objective-component>
-                            
+                                    @show="showMyGoals">                            
+                            </my-objective-component>                            
+                                                        
                         </ul>
+                        
                     </div>    
                 </div>        
             </div>
@@ -62,7 +62,8 @@ export default {
                 showAct: false,
                 objectiveSelected: null,
                 goalSelected: null,
-                show: true
+                show: true,
+                showObjectives: true
             }
         },
         created: function () {
@@ -74,7 +75,7 @@ export default {
             }.bind(this));
 
             eventBus.$on('newProgress', function (data) {                           
-                axios.get('/myobjectives').then((response) => {
+                axios.get('/myobjectiveswithprogress').then((response) => {
                     this.objectives = response.data;
                     this.goalHasActions = false;
                     this.objectiveHasGoals = true;
@@ -82,6 +83,7 @@ export default {
                 
                 this.checkStatusGoal(data);                                                         
             }.bind(this));
+            
         },
         mounted() {            
 
@@ -116,7 +118,7 @@ export default {
             },
 
             async myObjectives(){
-                await axios.get('/myobjectives').then((response) => {
+                await axios.get('/myobjectiveswithprogress').then((response) => {
                     this.objectives = response.data;
                 });
             }
