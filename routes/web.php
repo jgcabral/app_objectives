@@ -22,9 +22,21 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/goal', 'HomeController@goal')->name('goal');
 
-Route::get('/mygoals/{id_objective}', 'HomeController@myGoals')->name('mygoals');
 
-Route::get('/actionsbygoal/{id_goal}', 'HomeController@actionsByGoal')->name('actionsbygoal');
+//Route::get('/mygoals/{id_objective}', 'HomeController@myGoals')->name('mygoals');
+
+Route::get('/mygoals/{id_objective}', 'GoalController@myGoals')->name('mygoals');
+
+Route::get('/mygoalswithprogress/{id_objective}', 'GoalController@myGoalsWithProgress');
+
+Route::post('/closegoal/{id_goal}', 'GoalController@closeGoal');
+
+Route::get('/myactionsbygoal/{id_goal}', 'ActionController@myActionsByGoal');
+Route::get('/actionsbyactivity/{id_activity}', 'ActionController@ActionsByActivity');
+
+Route::get('/progressbyobjective/{id_objective}', 'ProgressController@progressByObjective')->name('progressbyobjective');
+//
+Route::get('/actionsbygoal/{id_goal}', 'ActionController@actionsByGoal')->name('actionsbygoal');
 
 Route::get('/viewobjectives', 'HomeController@viewObjectives')->name('viewobjectives');
 

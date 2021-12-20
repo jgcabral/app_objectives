@@ -1,8 +1,8 @@
 
 
 <template>
-    <div class="card text-white bg-dark mb-3">
-        <div class="card-header">Agregar Accion</div>
+    <div class="card mb-3">
+        <div class="card-header bg-primary text-white">Agregar Accion</div>
 
         <div class="card-body">
             <form action="" v-on:submit.prevent="newAction()">
@@ -10,14 +10,16 @@
                 <div class="form-row">
                     <div class="form-group col-md-4" v-if="goal">
                         <label for="exampleInputEmail1">Meta</label>
-                        <select name="goal_id" v-model="goal" class="form-select form-control">                            
+                        <!--<select name="goal_id" v-model="goal" class="form-select form-control">                            
                             <option v-for="item in goals" :value="item" :key="item.id">{{ item.description }}</option>                        
                         </select>
+                        -->
+                        <input type="text" v-model="goal.description" class="form-select form-control" disabled="disabled">
                     </div>
 
                     <div class="form-group col-md-4">
                         <label for="">Actividad </label>
-                        <button type="button" class="btn btn-secondary btn-sm float-right" v-on:click="showFormActivity">
+                        <button type="button" class="btn btn-primary btn-sm float-right" v-on:click="showFormActivity" >
                             <i class="bi-plus-circle-fill"></i> 
                         </button>
                         <select name="activity_id" v-model="activity" class="form-select form-control">                            
@@ -56,21 +58,17 @@ import { eventBus } from '../../app';
                 description: '',
                 goals: [],           
                 activities: [],     
-                timeSelected: null,
-                activitySelected: null,
-                activity: null,
-                fieldAditional: null,
-                showActivity: false,
-                //showFormActivity: false,
+                timeSelected: null,                
+                activity: null,                
+                showActivity: false,                
                 times: [ { id: 15, description: "15 Min" }, { id: 30, description: "30 Min" } ]
             }
         },
-
-        created: function () {                        
-            
+        created: function () {                                    
             eventBus.$on('newActivity', function (data) {  
                 this.activities.push(data);
                 this.showActivity = false;
+                this.activity = data;
             }.bind(this)); 
 
             eventBus.$on('showActivity', function (data) {                  
@@ -78,10 +76,8 @@ import { eventBus } from '../../app';
             }.bind(this));                                        
             
         },
-        mounted() {
-            axios.get('/goals').then((response) => {
-                this.goals = response.data;          
-            });
+        mounted() {  
+            //this.getActionsByGoal(this.goal);
 
             axios.get('/activitiesbygoal/'+ this.goal.id).then((response) => {
                 this.activities = response.data;          
@@ -90,8 +86,7 @@ import { eventBus } from '../../app';
         },
         methods:{            
             newAction (){
-                let params = {                                        
-                    options: this.fieldAditional,
+                let params = {                                                            
                     goal_id: this.goal.id,
                     activity_id: this.activity.id,
                     time: this.timeSelected.id
@@ -106,7 +101,21 @@ import { eventBus } from '../../app';
             }, 
             showFormActivity(){
                 eventBus.$emit('showActivity');
-            }
+            },
+            
+            async getActionsByGoal(goal){
+
+                await axios.get('/myactionsbygoal/'+goal.id).then((response) => {
+                    this.actions = response.data;          
+                });
+            },
+
+            /*async getActionsByActivity(activity){
+
+                await axios.get('/myactionsbyactivity/'+activity).then((response) => {
+                    this.timeSelected = response.data;          
+                });
+            }*/
         }
     }
 </script>

@@ -2,9 +2,11 @@
 
 namespace App\Core\Repository;
 
+use App\Core\Domain\Goal;
 use App\Core\Domain\Objective;
 use App\Core\Domain\Progress;
 use Illuminate\Database\Eloquent\Collection;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use PHPUnit\Util\Json;
@@ -25,15 +27,34 @@ class ProgressRepository implements IProgress{
     }
 
     function progressByGoal($id): String
-    {
+    {                
+        $goal = Goal::addSelect([
+            'prueba'=>'goals.id as goal_id',
+            'progress'=> Progress::select(DB::raw("round(sum(progress.time) / goals.approach * 100 ) progress"))
+                                    ->join('actions','progress.action_id','actions.id')                                                                                      
+                                    ->whereColumn('actions.goal_id','goals.id')                                                                           
+            ])                        
+            ->where('goals.id','=', $id)                                      
+            ->get();
         
-        $progress =  Progress::select(DB::raw("round(sum(progress.time) / goals.approach * 100 )progress"))
-                                    ->join('actions','progress.action_id','actions.id') 
-                                    ->join('goals','actions.goal_id','goals.id')                                                                                       
-                                    ->where('goals.id', $id)                         
-                                    ->get();
+        return $goal[0];
+                
+    }
 
-        return $progress[0];
-
+    function progressByObjective($id): Collection
+    {             
+        return Goal::addSelect([
+            'progress'=> Progress::select(DB::raw("round(sum(progress.time) / goals.approach * 100 ) progress"))
+                                    ->join('actions','progress.action_id','actions.id')                                                                                      
+                                    ->join('goals','actions.goal_id','goals.id')                                                                                      
+                                    ->join('objectives','goals.objective_id', 'objectives.id')                                                                                                                                                                                                   
+                                
+             ])   
+                                         
+            ->join('objectives','goals.objective_id', 'objectives.id')                                                                                      
+            ->where('objectives.id','=', $id)                                      
+            ->get();        
+              
+     
     }
 }

@@ -5,16 +5,22 @@
         <li class="list-group-item"> 
             {{ goal.description }} 
             <!--<button class="btn btn-primary pull-right" @click="showFormActions">Agregar Plan </button>-->
-            <span class="badge badge-pill badge-success" v-if="action">Configurado</span>
+            <span class="badge badge-pill badge-info" v-if="goal.action">Configurado</span>
             <!--<button type="button" class="btn btn-primary btn-sm float-right" v-on:click="showFormActions" v-show="!action">+ Accion</button>-->
-            <button type="button" class="btn btn-secondary btn-sm float-right" v-on:click="showFormActions">
-                <i class="bi-plus-circle-fill"></i> Accion
+            <button type="button" class="btn btn-secondary btn-sm float-right" v-on:click="showActions()">
+                <i class="bi-eye-fill"></i> Acciones
+            </button>  
+            
+            <button type="submit" class="btn btn-danger btn-sm float-right">
+                <i class="bi-trash-fill"></i>
+            </button> 
+
+            <button type="submit" class="btn btn-secondary btn-sm float-right">
+                <i class="bi-brush-fill"></i>
             </button>  
         </li>
-    
-        <actions-form-component :goal="goal" v-if="showActions"> </actions-form-component>
-
         
+        <my-actions-component v-if="showAllActions" :goal="goal"> </my-actions-component>
     </div>
 
 </template>
@@ -28,23 +34,23 @@ import { eventBus } from '../../app';
             return {
                 editMode: false,
                 showForm: false,
-                showActions: false,
-                action: null
+                showAllActions: false,
             }
 
         },
-        created: function () {             
-
+        created: function () {                         
+            /*
             eventBus.$on('addedAction', function (data) {                  
                 this.action = data;            
-                this.showActions = false;                
+                this.showAllActions = false;                
             }.bind(this));   
-            
+            */
         },
         
         methods: {
-            showFormActions(){
-                this.showActions = true;
+            showActions(){
+                this.showAllActions = true;
+                //eventBus.$emit('showActions', this.goal);
             },
             addGoal(goal){                
                 this.goals.push(goal);

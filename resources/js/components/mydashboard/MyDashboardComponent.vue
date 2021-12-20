@@ -2,8 +2,8 @@
     
         <div class="row justify-content-center">
             <div class="col-md-8 col-offset-md-4">
-                <div class="card bg-info">
-                    <div class="card-header">
+                <div class="card bg-secondary">
+                    <div class="card-header text-white">
                         Objetivos
                     </div>
                     <div class="card-body">    
@@ -23,7 +23,7 @@
             
             <div class="col-md-8 col-offset-md-4" v-if="objectiveHasGoals">
                 <div class="card bg-secondary">
-                    <div class="card-header">
+                    <div class="card-header text-white">
                     Metas para {{ objectiveSelected.description }}   
                     </div>
                     <div class="card-body">    
@@ -38,9 +38,16 @@
             </div>
 
             <div class="col-md-8 col-offset-md-4" v-if="goalHasActions">
-                <div class="card bg-light">
-                    <div class="card-header">
-                    {{ goalSelected.description }}  
+                <div class="card bg-secondary">
+                    <div class="card-header text-white">
+                    Agregar Progreso
+
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>  
                     </div>
                     <div class="card-body">    
                         <my-progress-component :goal="goalSelected"></my-progress-component>
@@ -67,7 +74,7 @@ export default {
             }
         },
         created: function () {
-            eventBus.$on('showAction', function (data) {                
+            eventBus.$on('showAction', function (data) {                            
                 this.goalHasActions = true;
                 this.goalSelected = data;
                 this.objectiveHasGoals = false;
@@ -81,8 +88,10 @@ export default {
                     this.objectiveHasGoals = true;
                 });
                 
-                this.checkStatusGoal(data);                                                         
+                this.checkStatusGoal(data);   
+                //this.goalSelected = data;                                                      
             }.bind(this));
+
             
         },
         mounted() {            

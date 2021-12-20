@@ -4,10 +4,12 @@
             <div class="card bg-info">                                
                 <ul class="list-group">    
                     <li class="list-group-item active">
-                        Metas para {{ objective.description }}
-                        <button type="button" class="btn btn-secondary btn-sm float-right" v-on:click="showFormGoal">
+                        Metas para  {{ objective.description }}
+
+                        <button type="button" class="btn btn-primary btn-sm float-right" v-on:click="showFormGoal()">
                             <i class="bi-plus-circle-fill"></i> Meta
                         </button> 
+                        
                     </li>        
                     <goal-component 
                         v-for="goal in goals" 
@@ -35,7 +37,7 @@ export default {
             return {
                 goals: [],
                 showGoals: false,
-                showGoalForm: true                
+                showGoalForm: false                               
             }
         },
         created: function () {
@@ -62,6 +64,11 @@ export default {
             },
             showFormGoal(){
                 this.showGoalForm = true;
+            }, 
+            showAllObjetivos(){
+                this.showGoals = false;
+                this.showGoalForm = false;
+                eventBus.$emit('showAllObjectives');
             }
         }
     }

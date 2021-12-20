@@ -1,18 +1,17 @@
 
 
 <template>
-    <div class="card text-white bg-info mb-3">
-        <div class="card-header">Agregar Meta</div>
+    <div class="card mb-3">
+        <div class="card-header text-white  bg-primary">Agregar Meta</div>
 
         <div class="card-body">
             <form action="" v-on:submit.prevent="newGoal()">
 
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="exampleInputEmail1">Objetivo</label>
-                        <select name="objective_id" v-model="objective" class="form-select form-control">                            
-                            <option v-for="item in objectives" :value="item" :key="item.id">{{ item.description }}</option>                        
-                        </select>
+                        <label for="exampleInputEmail1">Objetivo</label>                        
+                        <input type="text" v-model="objective.description" class="form-select form-control" disabled="disabled">
+
                     </div>
 
                     <div class="form-group col-md-4">
@@ -45,28 +44,33 @@ import { eventBus } from '../../app';
         data(){
             return {                
                 description: '',
-                objectives: [],
-                selectedObjective: null,
+                objectives: [],                
                 approachSelected: null,
                 approachs: [ 
-                            { id: 60, description: "60 Min" }, 
-                            { id: 120, description: "120 Min" }, 
-                            { id: 180, description: "180 Min" },
-                            { id: 240, description: "240 Min" }  
+                            { id: 60, description: "1 Hora" }, 
+                            { id: 120, description: "2 Horas" }, 
+                            { id: 240, description: "4 Horas" },
+                            { id: 480, description: "8 Horas" },
+                            { id: 960, description: "16 Horas" },
+                            { id: 1920, description: "24 Horas" },
+                            { id: 3840, description: "48 Horas" },
+                            { id: 7680, description: "72 Horas" },
+                            { id: 10080, description: "1 Semana" },
+                            { id: 20160, description: "2 Semanas" },
+                            { id: 30240, description: "3 Semanas" },
+                            { id: 43800, description: "1 Mes" },
+                            { id: 87600.1, description: "2 Meses" },
+                            { id: 175200, description: "4 Meses" },
+                            { id: 262800, description: "6 Meses" }  
                 ]
             }
         },
 
-        created: function () {            
-            eventBus.$on('showGoal', function (data) {                                        
-                //this.selectedObjective = data;
-            }.bind(this));
-        },
         mounted() {                        
             axios.get('/objectives').then((response) => {
                 this.objectives = response.data;          
                 
-            });                                    
+            });                               
         },
         methods:{
             

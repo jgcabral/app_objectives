@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <div class="card-header">Agregar Objetivo</div>
+        <div class="card-header bg-primary" style="color:white;">Agregar Objetivo</div>
 
         <div class="card-body">
             <form action="" v-on:submit.prevent="newObjective()">
@@ -12,6 +12,10 @@
                 <button type="submit" class="btn btn-primary btn-sm">
                     Guardar
                 </button>
+
+                <button type="submit" class="btn btn-primary btn-sm">
+                    Cancelar
+                </button>
             </form>
         </div>
     </div>
@@ -19,15 +23,23 @@
 </template>
 
 <script>
+import { eventBus } from '../../app';
     export default {
         data(){
-            return {                
+            return {    
+                id: '',            
                 description: ''
             }
         },
-        mounted() {
-            console.log('Component mounted.')
+
+        created: function(){
+            eventBus.$on('editObjective', function (data) { 
+                console.log(data);                          
+                this.description = data.description;
+                this.id = data.id;                                               
+            }.bind(this));
         },
+        
         methods:{
             newObjective (){
                 let params = {                                        
@@ -38,7 +50,7 @@
                 axios.post('/objectives', params)
                     .then((response) => {
                         const objective = response.data;
-                        this.$emit('new', objective);
+                        eventBus.$emit('newObjective', objective);
                     });
             }
         }

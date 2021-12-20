@@ -4,9 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Core\Domain\Action;
+use App\Core\Repository\IAction;
+use Illuminate\Support\Facades\DB;
 
 class ActionController extends Controller
 {
+
+
+    private $iAction;
+
+    public function __construct(IAction $actionRepository)
+    {
+        $this->iAction = $actionRepository;
+    }
 
 
     /**
@@ -70,4 +80,25 @@ class ActionController extends Controller
     {
         //
     }
+
+    public function actionsByGoal($id){
+        
+        return $this->iAction->getActionsByGoal($id);      
+                
+    }
+
+    public function actionsByActivity($id){
+        
+        return $this->iAction->getActionsByActivity($id);      
+                
+    }
+
+    public function myActionsByGoal($id){
+        
+        return $this->iAction->getActionsByGoal($id);      
+                
+    }
+
+
+    
 }

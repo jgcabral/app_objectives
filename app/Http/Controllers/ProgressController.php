@@ -97,7 +97,14 @@ class ProgressController extends Controller
     }
 
     public function progressByGoal($id){
-        return json_encode($this->iProgress->progressByGoal($id));                                             
+        
+        return $this->iProgress->progressByGoal($id);                                             
+
+    }
+
+    public function progressByObjective($id){
+                                                 
+        return json_encode($this->iProgress->progressByObjective($id));                                             
 
     }
 }

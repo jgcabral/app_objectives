@@ -35,9 +35,10 @@ export default {
             },
 
             async myGoals(){
-                await axios.get('/mygoals/'+ this.objective.id).then((response) => {
-                    this.goals = response.data;
+                await axios.get('/mygoalswithprogress/'+ this.objective.id).then((response) => {
+                    this.goals = response.data;                    
                 });
+                
             }
             
         }

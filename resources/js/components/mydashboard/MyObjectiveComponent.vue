@@ -6,7 +6,7 @@
             <div v-bind:class="classProgress" role="progressbar" v-bind:style="styleObject" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">{{ objective.progress }}%</div>
         </div>
         <button type="submit" class="btn btn-secondary btn-sm float-right" v-on:click="show(objective)">
-            <i class="bi-eye"></i> 
+            <i class="bi-eye-fill"></i> 
             Metas
         </button>               
     </li>
@@ -21,13 +21,11 @@ import { eventBus } from '../../app';
             return {
                 editMode: false,
                 showGoals: false,
-                styleObject: {
-                    width: this.objective.progress + "%"
-                }              
+                              
             }
 
         },
-        computed: {
+        computed: {            
             classProgress: function(){
                 if( this.objective.progress <= 25)
                 {
@@ -52,6 +50,9 @@ import { eventBus } from '../../app';
                     
                 }
 
+            },
+            styleObject: function() {
+                return { width: this.objective.progress + "%" }
             }
         },
         

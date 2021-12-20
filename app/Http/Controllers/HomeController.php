@@ -34,9 +34,6 @@ class HomeController extends Controller
             return redirect('viewobjectives');
         }
         
-        
-
-        
     }
 
     public function viewObjectives()
@@ -44,24 +41,5 @@ class HomeController extends Controller
         return view('objectives');
     }
 
-
-    public function myGoals($id){
-         
-        return DB::table('goals')
-                ->where('objective_id', $id)
-                ->get()
-                ;
-    }
-
-    public function actionsByGoal($id){
-        
-        $actions =  DB::table('actions')
-                ->where('goal_id', $id)
-                ->limit(1)
-                ->get()                
-                ;
-        return json_encode($actions[0]);
-                
-    }
 
 }

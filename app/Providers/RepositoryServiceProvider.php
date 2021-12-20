@@ -11,6 +11,8 @@ use App\Core\Repository\IActivity;
 use App\Core\Repository\ActivityRepository;
 use App\Core\Repository\IProgress;
 use App\Core\Repository\ProgressRepository;
+use App\Core\Repository\IAction;
+use App\Core\Repository\ActionRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -25,6 +27,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(IGoal::class, GoalRepository::class);
         $this->app->bind(IActivity::class, ActivityRepository::class);
         $this->app->bind(IProgress::class, ProgressRepository::class);
+        $this->app->bind(IAction::class, ActionRepository::class);
     }
 
     /**

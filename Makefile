@@ -15,6 +15,7 @@ prepare: .env
 start:
 	@docker-compose up -d
 	@npm run watch
+	@php artisan serve
 
 # Stops all project dependencies
 stop:

@@ -16,7 +16,7 @@ class ObjectiveTableSeeder extends Seeder
             'description'=> 'Inglés - A2',   
             'user_id' => 1
         ]);
-                
+
 
     }
 }

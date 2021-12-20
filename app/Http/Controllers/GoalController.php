@@ -17,17 +17,6 @@ class GoalController extends Controller
         $this->iGoal = $goalRepository;
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return Goal::all();
-        
-    }
-
 
     /**
      * Store a newly created resource in storage.
@@ -92,7 +81,29 @@ class GoalController extends Controller
         return $this->iGoal->goalsByObjective($id);
     }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function myGoals($id)
+    {
+        return $this->iGoal->myGoals($id);
+    }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function myGoalsWithProgress($id)
+    {
+        return $this->iGoal->myGoalsWithProgress($id);
+    }
     
 
     /**
@@ -104,6 +115,22 @@ class GoalController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+        /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function closeGoal(Request $request)
+    {
+        $goal = Goal::find($request->goal_id);
+  
+        $goal->finished = 1;        
+        $goal->save();
+
+        return $goal;
     }
 
 }

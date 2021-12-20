@@ -1,8 +1,8 @@
 
 
 <template>
-    <div class="card text-white bg-dark mb-3">
-        <div class="card-header">Agregar Actividad</div>
+    <div class="card mb-3">
+        <div class="card-header text-white bg-primary">Agregar Actividad</div>
 
         <div class="card-body">
             <form action="" v-on:submit.prevent="newActivity()">
