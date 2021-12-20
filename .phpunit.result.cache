@@ -1,1 +1,1 @@
-{"version":1,"defects":{"Tests\\Feature\\LevelAddTest::testAddLevel":3},"times":{"Tests\\Unit\\ExampleTest::testBasicTest":0.065,"Tests\\Feature\\ExampleTest::testBasicTest":0.017,"Tests\\Feature\\LevelAddTest::testAddLevel":0.04}}
+{"version":1,"defects":{"Tests\\Feature\\LevelAddTest::testAddLevel":3,"Tests\\Feature\\ExampleTest::testBasicTest":3},"times":{"Tests\\Unit\\ExampleTest::testBasicTest":0.137,"Tests\\Feature\\ExampleTest::testBasicTest":0.075,"Tests\\Feature\\LevelAddTest::testAddLevel":0.04}}

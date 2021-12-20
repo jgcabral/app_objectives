@@ -37,8 +37,13 @@ Vue.component('objective-form-component', require('./components/objectives/FormC
 Vue.component('goals-component', require('./components/goals/GoalsComponent.vue').default);
 Vue.component('goal-form-component', require('./components/goals/FormComponent.vue').default);
 Vue.component('goal-component', require('./components/goals/GoalComponent.vue').default);
-Vue.component('actions-form-component', require('./components/goals/ActionsFormComponent.vue').default);
-Vue.component('activity-form-component', require('./components/goals/ActivityComponent.vue').default);
+
+
+//Actions
+Vue.component('my-actions-component', require('./components/actions/MyActionsComponent.vue').default);
+Vue.component('my-action-form-component', require('./components/actions/FormComponent.vue').default);
+Vue.component('my-action-component', require('./components/actions/MyActionComponent.vue').default);
+Vue.component('activity-form-component', require('./components/actions/ActivityComponent.vue').default);
 
 export const eventBus = new Vue();
 
