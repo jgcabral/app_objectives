@@ -34,8 +34,8 @@ class ActionRepository implements IAction{
                                 
              ])   
                                          
-            ->join('activities','actions.id', 'activities.id')            
-            ->where('activities.id','=', $id)                                              
+            ->join('activities','actions.activity_id', 'activities.id')            
+            ->where('actions.activity_id','=', $id)                                              
             ->get();  
     }
 

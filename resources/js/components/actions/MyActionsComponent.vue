@@ -71,6 +71,11 @@ export default {
                 
             }.bind(this)); 
 
+
+            eventBus.$on('cancelAction', function () {   
+                this.showFormAction = false;
+            }.bind(this)); 
+
         },
 
         mounted() {

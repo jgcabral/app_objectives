@@ -77,6 +77,10 @@ export default {
                 
             }.bind(this)); 
 
+            eventBus.$on('cancelGoal', function () {   
+                this.showGoalForm = false;
+            }.bind(this)); 
+
         },
         //
         methods:{

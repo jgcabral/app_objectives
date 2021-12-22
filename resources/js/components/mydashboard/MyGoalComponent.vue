@@ -7,7 +7,7 @@
         <button type="submit" class="btn btn-success btn-sm float-right" v-on:click="closeGoal(goal)" v-if="done && goal.finished == 0"> 
             <i class="bi-check-circle-fill"></i>Finalizar
         </button>  
-        <button type="submit" class="btn btn-secondary btn-sm float-right" v-on:click="showAction(goal)" v-if="goal.progress < 100">
+        <button type="submit" class="btn btn-secondary btn-sm float-right" v-on:click="showAction(goal)" v-if="goal.finished == 0">
             <i class="bi-plus-circle-fill"></i>  Progreso
         </button>               
     </li>

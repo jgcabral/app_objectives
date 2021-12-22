@@ -42,7 +42,7 @@ import { eventBus } from '../../app';
             delObjective(objective){
                 eventBus.$emit('delObjective', objective);  
                 
-            }      
+            }
         }
     }
 </script>

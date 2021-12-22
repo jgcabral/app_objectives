@@ -4,6 +4,7 @@ namespace App\Core\Repository;
 
 use App\Core\Domain\Objective;
 use App\Core\Domain\Progress;
+use App\Core\Domain\Goal;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -20,13 +21,12 @@ class ObjectiveRepository implements IObjective{
     {
         
         return Objective::addSelect([
-            'progress'=> Progress::select(DB::raw("round(sum(progress.time) / goals.approach * 100 )"))
-                                    ->join('actions','progress.action_id','actions.id') 
-                                    ->join('goals','actions.goal_id','goals.id')                                                   
-                                    ->whereColumn('goals.objective_id','objectives.id')
-                                    
-            ])            
-            ->where('objectives.user_id','=', Auth::user()->id)                                      
-            ->get();
+                'progress'=> Goal::select(DB::raw("round(count(objective_id) / ( select count(*) from goals where goals.objective_id = objectives.id ) * 100) "))                                                                                           
+                                        ->where('goals.finished',  1)
+                                        ->whereColumn('goals.objective_id','objectives.id')
+                                        
+                ])            
+                ->where('objectives.user_id','=', Auth::user()->id)                                      
+                ->get();    
     }
 }

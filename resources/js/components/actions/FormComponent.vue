@@ -37,8 +37,12 @@
                     </div>
                </div>     
 
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary btn-sm">
                     Guardar
+                </button>
+
+                <button type="submit" class="btn btn-primary btn-sm" v-on:click="cancelAction()">
+                    Cancelar
                 </button>
             </form>
         </div>
@@ -157,7 +161,11 @@ import { eventBus } from '../../app';
                 await axios.get('/myactionsbygoal/'+goal.id).then((response) => {
                     this.actions = response.data;          
                 });
-            },            
+            },   
+            
+            cancelAction(){
+                eventBus.$emit('cancelAction');
+            }
         }
     }
 </script>

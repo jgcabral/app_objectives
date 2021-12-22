@@ -3,13 +3,10 @@
 namespace App\Core\Repository;
 
 use App\Core\Domain\Goal;
-use App\Core\Domain\Objective;
 use App\Core\Domain\Progress;
 use Illuminate\Database\Eloquent\Collection;
-
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use PHPUnit\Util\Json;
+
 
 class ProgressRepository implements IProgress{
     

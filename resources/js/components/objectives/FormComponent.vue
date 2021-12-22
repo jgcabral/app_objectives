@@ -13,7 +13,7 @@
                     Guardar
                 </button>
 
-                <button type="submit" class="btn btn-primary btn-sm">
+                <button type="submit" class="btn btn-primary btn-sm" v-on:click="cancelObjective()">
                     Cancelar
                 </button>
             </form>
@@ -71,6 +71,9 @@ import { eventBus } from '../../app';
 
                 }
                 
+            },
+            cancelObjective(){
+                eventBus.$emit('cancelObjective');
             }
         }
     }
