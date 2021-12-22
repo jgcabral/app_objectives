@@ -5,7 +5,7 @@
         <div class="card-header bg-primary text-white">Agregar Accion</div>
 
         <div class="card-body">
-            <form action="" v-on:submit.prevent="newAction()">
+            <form action="" v-on:submit.prevent="saveAction()">
 
                 <div class="form-row">
                     <div class="form-group col-md-4" v-if="goal">
@@ -57,12 +57,41 @@ import { eventBus } from '../../app';
             return {                
                 description: '',
                 goals: [],           
-                activities: [],     
-                timeSelected: null,                
-                activity: null,                
+                activities: [],                     
                 showActivity: false,                
                 times: [ { id: 15, description: "15 Min" }, { id: 30, description: "30 Min" } ]
             }
+        },
+
+        computed: {                                                
+            timeSelected:
+            {
+                get: function () {                                        
+                    return (this.$store.state.action!= null)?this.times.find(item => item.id == this.$store.state.action.time ) : this.times[0];   
+                }, 
+                
+                set: function (value) {    
+                    this.$store.commit('editApproach', value);                                      
+                }
+            },
+
+            activity:
+            {
+                get: function () {                                        
+                    return (this.$store.state.action!= null)?this.activities.find(item => item.id == this.$store.state.action.activity_id ) : this.activities[0];   
+                }, 
+                
+                set: function (value) {    
+                    this.$store.commit('addActivity', value);                                      
+                }
+            },
+            editAction: {
+                get: function () {                                        
+                    return this.$store.state.editAction;   
+                },
+            }
+
+            
         },
         created: function () {                                    
             eventBus.$on('newActivity', function (data) {  
@@ -76,8 +105,7 @@ import { eventBus } from '../../app';
             }.bind(this));                                        
             
         },
-        mounted() {  
-            //this.getActionsByGoal(this.goal);
+        mounted() {              
 
             axios.get('/activitiesbygoal/'+ this.goal.id).then((response) => {
                 this.activities = response.data;          
@@ -85,19 +113,40 @@ import { eventBus } from '../../app';
             
         },
         methods:{            
-            newAction (){
-                let params = {                                                            
-                    goal_id: this.goal.id,
-                    activity_id: this.activity.id,
-                    time: this.timeSelected.id
+            saveAction (){
 
-                }                
+                if( this.editAction ){
+                    let params = {                                                            
+                        action_id: this.$store.state.action.id,
+                        activity_id: this.$store.state.activity.id,
+                        time: this.$store.state.approach.id
+                    }    
+            
+                    axios.put('/actions', params)
+                        .then((response) => {
+                            const actions = response.data;
 
-                axios.post('/actions', params)
-                    .then((response) => {
-                        const actions = response.data;
-                        eventBus.$emit('addedAction', actions);
-                    });
+                            actions.description = this.$store.state.activity.description;
+
+                            eventBus.$emit('addedAction', actions);
+                        });
+                }else{
+                    let params = {                                                            
+                        goal_id: this.goal.id,
+                        activity_id: this.activity.id,
+                        time: this.timeSelected.id
+                    }    
+            
+                    axios.post('/actions', params)
+                        .then((response) => {
+                            const actions = response.data;
+                            actions.description = this.activity.description;
+                            
+                            eventBus.$emit('addedAction', actions);
+                        });
+                }
+
+                
             }, 
             showFormActivity(){
                 eventBus.$emit('showActivity');
@@ -108,14 +157,7 @@ import { eventBus } from '../../app';
                 await axios.get('/myactionsbygoal/'+goal.id).then((response) => {
                     this.actions = response.data;          
                 });
-            },
-
-            /*async getActionsByActivity(activity){
-
-                await axios.get('/myactionsbyactivity/'+activity).then((response) => {
-                    this.timeSelected = response.data;          
-                });
-            }*/
+            },            
         }
     }
 </script>

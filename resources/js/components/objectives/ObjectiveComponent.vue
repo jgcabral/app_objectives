@@ -7,7 +7,7 @@
         </button>  
 
 
-        <button type="submit" class="btn btn-danger btn-sm float-right">
+        <button type="submit" class="btn btn-danger btn-sm float-right" v-on:click="delObjective(objective)">
             <i class="bi-trash-fill"></i>
         </button> 
 
@@ -37,7 +37,12 @@ import { eventBus } from '../../app';
             },     
             editObjective(objective){
                 eventBus.$emit('editObjective', objective);  
-            }       
+                
+            },
+            delObjective(objective){
+                eventBus.$emit('delObjective', objective);  
+                
+            }      
         }
     }
 </script>

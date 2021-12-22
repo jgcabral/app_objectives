@@ -16,7 +16,8 @@ class GoalRepository implements IGoal{
                                 'goals.description'=> 'goals.description',                                                                
                                 'goals.finished'=> 'goals.finished',
                                 'goals.objective_id'=> 'goals.objective_id',
-                                'goals.id as goal_id'=> 'goals.id as goal_id'
+                                'goals.id as goal_id'=> 'goals.id as goal_id',
+                                'goals.approach'=> 'goals.approach',
                                 ])                                
                    ->where('goals.objective_id','=', $id)                         
             ->get();

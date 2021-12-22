@@ -35,7 +35,9 @@ export default {
         data() {
             return {
                 actions: [],
-                showFormAction: false
+                showFormAction: false,
+                actionSelected: null,
+                mode: false
             }
         },
         created: function () {
@@ -47,9 +49,27 @@ export default {
             }.bind(this));
 
             eventBus.$on('addedAction', function (data) {                   
-                this.actions.push(data);
+                this.myActionsByGoal();
+                //this.actions.push(data);
                 this.showFormAction = false;
             }.bind(this));
+
+            eventBus.$on('editAction', function (data) {   
+                this.showFormAction = true;
+                this.actionSelected = data;                               
+                                
+                this.$store.commit('getAction', this.actionSelected);   
+                this.$store.commit('editAction', true);             
+                
+            }.bind(this)); 
+
+            eventBus.$on('delAction', function (action) {   
+                axios.delete('actions/' + action.id)
+                    .then((response) => {
+                        this.myActionsByGoal();                        
+                    });  
+                
+            }.bind(this)); 
 
         },
 

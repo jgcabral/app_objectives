@@ -47,6 +47,7 @@ import { eventBus } from '../../app';
                         const activity = response.data;
                         this.description = '';
                         eventBus.$emit('newActivity', activity);
+                        this.$store.commit('addActivity', activity); 
                     });
             }
         }

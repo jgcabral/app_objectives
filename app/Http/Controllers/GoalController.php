@@ -64,9 +64,14 @@ class GoalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $goal = Goal::find($request->goal_id);
+        $goal->approach = $request->approach;
+        $goal->description = $request->description;
+        $goal->save();
+
+        return $goal;
     }
 
         /**
@@ -114,7 +119,9 @@ class GoalController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $goal = Goal::find($id);
+        
+        $goal->delete();
     }
 
         /**

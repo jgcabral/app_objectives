@@ -50,26 +50,20 @@ class ObjectiveController extends Controller
 
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $objective = Objective::find($request->id);
+        $objective->description = $request->description;
+        $objective->save();
+
+        return $objective;
+
     }
 
     /**
@@ -80,7 +74,11 @@ class ObjectiveController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $objective = Objective::find($id);
+        
+        $objective->delete();
+
+        
     }
 
     /**

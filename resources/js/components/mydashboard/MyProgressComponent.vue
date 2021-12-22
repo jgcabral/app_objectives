@@ -90,7 +90,7 @@ export default {
                     this.goals = response.data;          
                 });
             },
-            onChange(event){
+            onChange(){
               
                 axios.get('/actionsbyactivity/' + this.activity.id).then((response) => { 
 

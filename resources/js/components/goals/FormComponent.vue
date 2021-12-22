@@ -9,7 +9,7 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-4">
-                        <label for="exampleInputEmail1">Objetivo</label>                        
+                        <label for="exampleInputEmail1">Objetivo </label>                        
                         <input type="text" v-model="objective.description" class="form-select form-control" disabled="disabled">
 
                     </div>
@@ -39,13 +39,16 @@
 <script>
 
 import { eventBus } from '../../app';
-    export default {
-        props: ['objective'],
+    export default {        
+        props: {
+            objective: Object,
+            goal: Object,
+            mode: Boolean
+        },
+        
         data(){
-            return {                
-                description: '',
+            return {                                
                 objectives: [],                
-                approachSelected: null,
                 approachs: [ 
                             { id: 60, description: "1 Hora" }, 
                             { id: 120, description: "2 Horas" }, 
@@ -65,30 +68,79 @@ import { eventBus } from '../../app';
                 ]
             }
         },
+        computed: {                                    
+            description: 
+            {
+                // getter
+                get: function () {                    
+                    return (this.$store.state.goal!= null)?this.$store.state.goal.description:this.$store.state.description;
+                },                                    
+                set: function (value) {    
+                    this.$store.commit('addDescription', value);                                      
+                }
+            }, 
+            
+            approachSelected:
+            {
+                get: function () {                                        
+                    return (this.$store.state.goal!= null)?this.approachs.find(item => item.id == this.$store.state.goal.approach ) : this.approachs[0];   
+                }, 
+                
+                set: function (value) {    
+                    this.$store.commit('editApproach', value);                                      
+                }
+            },
+            editGoal: {
+                get: function () {                                        
+                    return this.$store.state.editGoal;   
+                },
+            }
+            
+        },
 
-        mounted() {                        
+        mounted() {                                 
             axios.get('/objectives').then((response) => {
                 this.objectives = response.data;          
-                
-            });                               
+            });                              
+            
         },
         methods:{
-            
-            newGoal (){
-                let params = {                                        
-                    description: this.description,
-                    objective_id: this.objective.id,
-                    approach: this.approachSelected.id
+                        
+            newGoal (){                
+                
+                if( this.editGoal ){
+                    let params = {                                        
+                        description: this.$store.state.description,
+                        objective_id: this.objective.id,
+                        approach: this.$store.state.approach.id,
+                        goal_id: this.$store.state.goal.id
+                    }
 
-                }
-                this.description = '';                         
-
-                axios.post('/goals', params)
+                    axios.put('/goals', params)
                     .then((response) => {
                         const goal = response.data;
                         
                         eventBus.$emit('newGoal', goal);    
                     });
+
+                }else{
+                    let params = {                                        
+                        description: this.$store.state.description,
+                        objective_id: this.objective.id,
+                        approach: this.approachSelected.id
+                    }
+
+                    this.description = '';     
+
+                    axios.post('/goals', params)
+                    .then((response) => {
+                        const goal = response.data;
+                        
+                        eventBus.$emit('newGoal', goal);    
+                    });
+                }
+
+                
             }
         }
     }

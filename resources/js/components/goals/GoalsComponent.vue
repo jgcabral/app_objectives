@@ -23,7 +23,7 @@
         </div>        
         
         <div class="col-md-12">
-            <goal-form-component :objective="objective" v-show="showGoalForm"></goal-form-component>
+            <goal-form-component :objective="objective" :goal="goalSelected" :mode="mode" v-show="showGoalForm"></goal-form-component>
         </div>    
     </div>
 </template>
@@ -36,8 +36,11 @@ export default {
         data() {
             return {
                 goals: [],
+                goal: null,
+                goalSelected: null,
                 showGoals: false,
-                showGoalForm: false                               
+                showGoalForm: false ,
+                mode: false                               
             }
         },
         created: function () {
@@ -53,6 +56,26 @@ export default {
                 this.showGoalForm = false;
                 this.getGoals();
             }.bind(this));
+
+
+            eventBus.$on('editGoal', function (data) {   
+                this.showGoalForm = true;
+                this.goalSelected = data;                               
+                this.mode = true;
+                
+                this.$store.commit('getGoal', this.goalSelected);  
+                this.$store.commit('editGoal', true);                
+                
+            }.bind(this)); 
+
+            eventBus.$on('delGoal', function (goal) {   
+                    axios.delete('goals/' + goal.id)
+                    .then((response) => {
+                        this.getGoals();
+                        
+                    });  
+                
+            }.bind(this)); 
 
         },
         //

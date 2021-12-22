@@ -22,9 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/goal', 'HomeController@goal')->name('goal');
 
-
-//Route::get('/mygoals/{id_objective}', 'HomeController@myGoals')->name('mygoals');
-
 Route::get('/mygoals/{id_objective}', 'GoalController@myGoals')->name('mygoals');
 
 Route::get('/mygoalswithprogress/{id_objective}', 'GoalController@myGoalsWithProgress');
@@ -32,6 +29,7 @@ Route::get('/mygoalswithprogress/{id_objective}', 'GoalController@myGoalsWithPro
 Route::post('/closegoal/{id_goal}', 'GoalController@closeGoal');
 
 Route::get('/myactionsbygoal/{id_goal}', 'ActionController@myActionsByGoal');
+
 Route::get('/actionsbyactivity/{id_activity}', 'ActionController@ActionsByActivity');
 
 Route::get('/progressbyobjective/{id_objective}', 'ProgressController@progressByObjective')->name('progressbyobjective');
@@ -51,7 +49,17 @@ Route::get('/progressbygoal/{id_goal}', 'ProgressController@progressByGoal')->na
 Route::get('/activitiesbygoal/{id_goal}', 'ActivityController@activitiesByGoal');
 
 Route::get('/goalsbyobjective/{id_objective}', 'GoalController@goalsByObjective')->name('goalsbyobjective');
-//Route::get('/progressbyobjective', HomeController::class);
+
+
+Route::put('objectives', 'ObjectiveController@update');
+
+Route::put('goals', 'GoalController@update');
+
+Route::put('actions', 'ActionController@update');
+
+Route::delete('objectives/{id_objective}', 'ObjectiveController@destroy');
+Route::delete('goals/{id_goal}', 'GoalController@destroy');
+Route::delete('actions/{id_action}', 'ActionController@destroy');
 
 Route::apiResource('objectives', 'ObjectiveController');
 

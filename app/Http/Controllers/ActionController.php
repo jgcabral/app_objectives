@@ -37,37 +37,20 @@ class ActionController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $action = Action::find($request->action_id);        
+        $action->activity_id = $request->activity_id;
+        $action->time = $request->time;
+        $action->save();
+
+        return $action;
     }
 
     /**
@@ -78,7 +61,9 @@ class ActionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $action = Action::find($id);
+        
+        $action->delete();
     }
 
     public function actionsByGoal($id){

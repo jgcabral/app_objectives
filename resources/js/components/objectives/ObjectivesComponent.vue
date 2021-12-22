@@ -50,7 +50,8 @@ export default {
                 showFormGoal: null,
                 showObjectives: true,
                 addFormObjective: false,
-                viewObjectives: false
+                viewObjectives: false,
+                objectiveSelected: null
             }
         },
         
@@ -62,21 +63,32 @@ export default {
                                
             }.bind(this)); 
             
-            eventBus.$on('newObjective', function (data) {                  
+            eventBus.$on('newObjective', function () {                  
                 this.addFormObjective = false;
-                this.objectives.push(data);
+                this.getObjectives();   
                                
             }.bind(this)); 
 
-            eventBus.$on('showObjectives', function (data) {                  
+            eventBus.$on('showObjectives', function () {                  
                 this.showObjectives = true;
                                
             }.bind(this)); 
 
-            eventBus.$on('editObjective', function (data) {                  
+            eventBus.$on('editObjective', function (data) {   
+                               
                 this.addFormObjective = true;
                 this.objectiveSelected = data;              
             }.bind(this)); 
+
+            eventBus.$on('delObjective', function (objective) {   
+                axios.delete('objectives/' + objective.id)
+                    .then((response) => {
+                        const objective = response.data;
+                        eventBus.$emit('newObjective', objective);
+                    });              
+            }.bind(this)); 
+
+
             
         },
         mounted() {

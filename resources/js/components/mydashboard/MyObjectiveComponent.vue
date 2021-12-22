@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import { eventBus } from '../../app';
     export default {
         props: ['objective'],
         data (){

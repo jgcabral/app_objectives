@@ -11,11 +11,11 @@
                 <i class="bi-eye-fill"></i> Acciones
             </button>  
             
-            <button type="submit" class="btn btn-danger btn-sm float-right">
+            <button type="submit" class="btn btn-danger btn-sm float-right" v-on:click="delGoal(goal)">
                 <i class="bi-trash-fill"></i>
             </button> 
 
-            <button type="submit" class="btn btn-secondary btn-sm float-right">
+            <button type="submit" class="btn btn-secondary btn-sm float-right" v-on:click="editGoal(goal)">
                 <i class="bi-brush-fill"></i>
             </button>  
         </li>
@@ -37,23 +37,19 @@ import { eventBus } from '../../app';
                 showAllActions: false,
             }
 
-        },
-        created: function () {                         
-            /*
-            eventBus.$on('addedAction', function (data) {                  
-                this.action = data;            
-                this.showAllActions = false;                
-            }.bind(this));   
-            */
-        },
-        
+        },      
         methods: {
             showActions(){
                 this.showAllActions = true;
-                //eventBus.$emit('showActions', this.goal);
             },
             addGoal(goal){                
                 this.goals.push(goal);
+            },
+            editGoal(goal){                
+                eventBus.$emit('editGoal', goal);  
+            },
+            delGoal(goal){                
+                eventBus.$emit('delGoal', goal);  
             }
         }
     }

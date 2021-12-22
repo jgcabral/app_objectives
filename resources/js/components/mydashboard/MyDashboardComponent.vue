@@ -88,8 +88,7 @@ export default {
                     this.objectiveHasGoals = true;
                 });
                 
-                this.checkStatusGoal(data);   
-                //this.goalSelected = data;                                                      
+                this.checkStatusGoal(data);                                                         
             }.bind(this));
 
             
@@ -108,10 +107,7 @@ export default {
                 this.objectiveHasGoals = true;
                 this.objectiveSelected = objective;
             },
-            /*onShowMy(goal){                                
-                this.goalHasActions = true;
-                this.goalSelected = goal;
-            },*/
+        
             
             async checkStatusGoal(progress){
                 await axios.get('/progressbyaction/'+progress.action_id).then((response) => {

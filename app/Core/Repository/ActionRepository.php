@@ -15,13 +15,13 @@ class ActionRepository implements IAction{
         return Action::addSelect([
             'activities.description'=> 'activities.description',
             'actions.time'=> 'actions.time',
-            'actions.id'=> 'actions.id'                                                                                                                                                                                                                                                                                                                                                                                          
-                                
+            'actions.id'=> 'actions.id',                                                                                                                                                                                                                                                                                                                                                                                      
+            'activities.id as activity_id'=> 'activities.id as activity_id',                                
              ])   
                                          
-            ->join('activities','actions.id', 'activities.id')
+            ->join('activities','actions.activity_id', 'activities.id')
             ->join('goals','actions.goal_id', 'goals.id')                                    
-            ->where('goals.id','=', $id)                                                  
+            ->where('actions.goal_id','=', $id)                                                  
             ->get();  
     }
 
