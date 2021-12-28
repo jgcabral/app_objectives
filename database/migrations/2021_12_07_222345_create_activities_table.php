@@ -18,7 +18,7 @@ class CreateActivitiesTable extends Migration
             $table->bigInteger('goal_id')->unsigned()->index();
             $table->foreign('goal_id')->references('id')->on('goals')->onDelete('cascade');   
             $table->string('description');     
-            $table->timestamps();
+            
         });
     }
 

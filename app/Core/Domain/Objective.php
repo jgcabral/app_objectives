@@ -12,6 +12,8 @@ class Objective extends Model
      */
     private $value;
 
+    public $timestamps = false;
+
     public function getValue(): string
     {
         return $this->value;

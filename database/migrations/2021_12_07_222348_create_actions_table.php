@@ -22,7 +22,7 @@ class CreateActionsTable extends Migration
             $table->foreign('activity_id')->references('id')->on('activities')->onDelete('cascade');
             $table->index('activity_id');            
             $table->bigInteger('time');//guardar los segundos de los dias
-            $table->timestamps();
+            
         });
     }
 

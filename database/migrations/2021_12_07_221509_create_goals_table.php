@@ -20,7 +20,7 @@ class CreateGoalsTable extends Migration
             $table->string('description');         
             $table->boolean('finished')->default(0);
             $table->bigInteger('approach');//guardar los segundos de los dias
-            $table->timestamps();
+            
         });
     }
 

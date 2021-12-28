@@ -101,7 +101,8 @@ import { eventBus } from '../../app';
             eventBus.$on('newActivity', function (data) {  
                 this.activities.push(data);
                 this.showActivity = false;
-                this.activity = data;
+                
+                
             }.bind(this)); 
 
             eventBus.$on('showActivity', function (data) {                  

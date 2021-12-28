@@ -116,7 +116,7 @@ import { eventBus } from '../../app';
                     let params = {                                        
                         description: this.$store.state.description,
                         objective_id: this.objective.id,
-                        approach: this.$store.state.approach.id,
+                        approach: this.approachSelected.id,
                         goal_id: this.$store.state.goal.id
                     }
 

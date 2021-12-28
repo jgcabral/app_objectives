@@ -6,7 +6,7 @@
 
 
 import Vue from 'vue';
- import { store } from './store'
+import { store } from './store'
 
 require('./bootstrap');
 

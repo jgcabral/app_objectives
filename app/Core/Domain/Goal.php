@@ -7,4 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Goal extends Model
 {
     public $progress = 0;
+    public $timestamps = false;
 }
