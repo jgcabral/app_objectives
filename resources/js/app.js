@@ -9,6 +9,8 @@ import Vue from 'vue';
 
 require('./bootstrap');
 
+require('./store');
+
 window.Vue = require('vue');
 
 /**
@@ -55,7 +57,8 @@ export const eventBus = new Vue();
  */
 
 const app = new Vue({
-    el: '#app'    
+    el: '#app',
+    store: Store    
 });
 
 
