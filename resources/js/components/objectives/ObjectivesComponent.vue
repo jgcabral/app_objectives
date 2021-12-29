@@ -16,7 +16,7 @@
                         </button>   
                     </li>   
 
-                    <li class="list-group-item list-group-item-warning" v-if="objectives.length == 0">
+                    <li class="list-group-item list-group-item-warning" v-if="objectives.length == 0 || objectives== null">
                         No hay objectivos cargados
                     </li>
 

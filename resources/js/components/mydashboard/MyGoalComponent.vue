@@ -3,14 +3,14 @@
     <li class="list-group-item">
         {{ goal.description }}
         <!--<span v-if="finished" class="justify-content-center">Ya ha alcanzado</span>-->
-        <span class="badge badge-pill"  v-if="goal.progress > 0">                        
+        <span class="badge badge-pill"  v-if="goal.progress != ''">                        
             <i class="bi-alarm-fill"></i>  {{ goal.progress }}
             <span class="badge badge-info">Cargado</span>
         </span>   
         
         <span class="badge badge-pill badge-success float-right" v-show="goal.finished">Finalizada</span>                   
         
-        <button type="submit" class="btn btn-success btn-sm float-right" v-on:click="closeGoal(goal)" v-if="goal.finished == 0 && goal.progress > 0"> 
+        <button type="submit" class="btn btn-success btn-sm float-right" v-on:click="closeGoal(goal)" v-if="goal.finished == 0 && goal.progress != ''"> 
             <i class="bi-check-circle-fill"></i>Finalizar
         </button>  
         

@@ -28,9 +28,7 @@ class HomeController extends Controller
     {
         $objectives = $this->iObjective->allMyObjectives();
 
-        return view('home');
-
-        if($objectives->contains(Auth::user()->id)){
+        if(count($objectives) > 0 ){
             return view('home');
         }else{
             return redirect('viewobjectives');
