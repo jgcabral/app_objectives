@@ -4,13 +4,19 @@
             <div class="card">
                 <ul class="list-group">     
                     <li class="list-group-item active">
+                        <i class="bi-stack"></i>
                         Acciones para  {{ goal.description }}
 
                         <button  type="button" class="btn btn-primary btn-sm float-right" v-on:click="showForm()">
                             <i class="bi-plus-circle-fill"></i> Accion
                         </button> 
                         
-                    </li>                                            
+                    </li>      
+
+                    <li class="list-group-item list-group-item-warning" v-if="actions.length == 0">
+                        No hay acciones cargadas
+                    </li>
+
                     <my-action-component 
                         v-for="action in actions" 
                             :key="action.id"

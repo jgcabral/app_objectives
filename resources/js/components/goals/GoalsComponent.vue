@@ -4,13 +4,20 @@
             <div class="card bg-info">                                
                 <ul class="list-group">    
                     <li class="list-group-item active">
+                        <i class="bi-ui-checks"></i> 
+
                         Metas para  {{ objective.description }}
 
                         <button type="button" class="btn btn-primary btn-sm float-right" v-on:click="showFormGoal()">
                             <i class="bi-plus-circle-fill"></i> Meta
                         </button> 
                         
-                    </li>        
+                    </li>     
+
+                    <li class="list-group-item list-group-item-warning" v-if="goals.length == 0">
+                        No hay metas cargadas
+                    </li>
+
                     <goal-component 
                         v-for="goal in goals" 
                             :key="goal.id"

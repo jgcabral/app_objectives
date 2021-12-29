@@ -71,11 +71,11 @@ import { eventBus } from '../../app';
             timeSelected:
             {
                 get: function () {                                        
-                    return (this.$store.state.action!= null)?this.times.find(item => item.id == this.$store.state.action.time ) : this.times[0];   
+                    return (this.$store.state.action!= null)?this.times.find(item => item.id == this.$store.state.action.time ) : this.times[0].id;   
                 }, 
                 
                 set: function (value) {    
-                    this.$store.commit('editApproach', value);                                      
+                    this.$store.commit('editTime', value);                                      
                 }
             },
 
@@ -87,6 +87,7 @@ import { eventBus } from '../../app';
                 
                 set: function (value) {    
                     this.$store.commit('addActivity', value);                                      
+                    
                 }
             },
             editAction: {
@@ -119,27 +120,27 @@ import { eventBus } from '../../app';
         },
         methods:{            
             saveAction (){
-
+                
                 if( this.editAction ){
                     let params = {                                                            
                         action_id: this.$store.state.action.id,
-                        activity_id: this.$store.state.activity.id,
-                        time: this.$store.state.approach.id
+                        activity_id: this.activity.id,
+                        time: this.$store.state.time
                     }    
+                    console.log("edicion");
+                    console.log(this.$store.state.action);
             
                     axios.put('/actions', params)
                         .then((response) => {
                             const actions = response.data;
-
-                            actions.description = this.$store.state.activity.description;
-
+                            
                             eventBus.$emit('addedAction', actions);
                         });
                 }else{
                     let params = {                                                            
                         goal_id: this.goal.id,
                         activity_id: this.activity.id,
-                        time: this.timeSelected.id
+                        time: this.$store.state.time
                     }    
             
                     axios.post('/actions', params)

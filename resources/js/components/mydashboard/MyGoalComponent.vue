@@ -3,10 +3,17 @@
     <li class="list-group-item">
         {{ goal.description }}
         <!--<span v-if="finished" class="justify-content-center">Ya ha alcanzado</span>-->
+        <span class="badge badge-pill"  v-if="goal.progress > 0">                        
+            <i class="bi-alarm-fill"></i>  {{ goal.progress }}
+            <span class="badge badge-info">Cargado</span>
+        </span>   
+        
         <span class="badge badge-pill badge-success float-right" v-show="goal.finished">Finalizada</span>                   
-        <button type="submit" class="btn btn-success btn-sm float-right" v-on:click="closeGoal(goal)" v-if="done && goal.finished == 0"> 
+        
+        <button type="submit" class="btn btn-success btn-sm float-right" v-on:click="closeGoal(goal)" v-if="goal.finished == 0 && goal.progress > 0"> 
             <i class="bi-check-circle-fill"></i>Finalizar
         </button>  
+        
         <button type="submit" class="btn btn-secondary btn-sm float-right" v-on:click="showAction(goal)" v-if="goal.finished == 0">
             <i class="bi-plus-circle-fill"></i>  Progreso
         </button>               
@@ -22,19 +29,6 @@ import { eventBus } from '../../app';
         props: ['goal'],
         data (){
             return {                                
-            }
-
-        },
-        
-        computed: {
-            done: function()
-            {                
-                if( this.goal.progress >= 100)
-                {                                                
-                    return true;
-                        
-                }
-                
             }
 
         },

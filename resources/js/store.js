@@ -12,7 +12,8 @@ export const store = new Vuex.Store({
         action: null,
         activity: null,
         editGoal: false,
-        editAction: false
+        editAction: false, 
+        time: null
     }, 
 
     mutations:{
@@ -21,10 +22,16 @@ export const store = new Vuex.Store({
             state.mode = true;
         },
         addDescription(state, data){
-            state.description = data;
+            state.goal = {};
+            state.goal.description = data;
         },
-        editApproach(state, approach){
-            state.approach = approach;
+        editApproach(state, approach){            
+            
+            state.goal.approach = approach.id;
+            
+        },
+        editTime(state, time){                     
+            state.time = time.id;
         },
 
         getAction(state, action){
@@ -32,7 +39,9 @@ export const store = new Vuex.Store({
             state.mode = true;
         },
         addActivity(state, activity){
-            state.activity = activity;            
+            state.action = {};
+            state.activity = activity;
+            state.action.activity_id = activity.id;            
         },
         editGoal(state, mode){
             state.editGoal = mode;

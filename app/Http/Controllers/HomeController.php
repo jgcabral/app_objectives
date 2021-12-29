@@ -28,6 +28,8 @@ class HomeController extends Controller
     {
         $objectives = $this->iObjective->allMyObjectives();
 
+        return view('home');
+
         if($objectives->contains(Auth::user()->id)){
             return view('home');
         }else{

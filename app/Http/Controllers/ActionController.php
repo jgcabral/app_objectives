@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Core\Domain\Action;
+use App\Core\Domain\Activity;
 use App\Core\Repository\IAction;
 use Illuminate\Support\Facades\DB;
 
@@ -44,7 +45,7 @@ class ActionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
-    {
+    {        
         $action = Action::find($request->action_id);        
         $action->activity_id = $request->activity_id;
         $action->time = $request->time;
@@ -62,8 +63,14 @@ class ActionController extends Controller
     public function destroy($id)
     {
         $action = Action::find($id);
+
+        $activity = Activity::find($action->activity_id);
+
+        $activity->delete();
         
         $action->delete();
+
+        
     }
 
     public function actionsByGoal($id){

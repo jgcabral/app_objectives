@@ -5,6 +5,7 @@
             <div class="card">
                 <ul class="list-group"> 
                     <li class="list-group-item active">
+                    <i class="bi-ticket-detailed-fill"></i>
                     Objetivos
                         <button type="button" class="btn btn-primary btn-sm float-right" v-if="showObjectives" v-on:click="showFormAddObjective()">
                             <i class="bi-plus-circle-fill"></i>
@@ -14,6 +15,10 @@
                             <i class="bi-eye"></i>
                         </button>   
                     </li>   
+
+                    <li class="list-group-item list-group-item-warning" v-if="objectives.length == 0">
+                        No hay objectivos cargados
+                    </li>
 
                     <objective-component v-show="showObjectives"
                         v-for="objective in objectives" 

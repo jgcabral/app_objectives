@@ -5,7 +5,7 @@
         <div class="card-header text-white  bg-primary">Agregar Meta</div>
 
         <div class="card-body">
-            <form action="" v-on:submit.prevent="newGoal()">
+            <form action="" v-on:submit.prevent="saveGoal()">
 
                 <div class="form-row">
                     <div class="form-group col-md-4">
@@ -66,7 +66,7 @@ import { eventBus } from '../../app';
                             { id: 20160, description: "2 Semanas" },
                             { id: 30240, description: "3 Semanas" },
                             { id: 43800, description: "1 Mes" },
-                            { id: 87600.1, description: "2 Meses" },
+                            { id: 876001, description: "2 Meses" },
                             { id: 175200, description: "4 Meses" },
                             { id: 262800, description: "6 Meses" }  
                 ]
@@ -87,7 +87,8 @@ import { eventBus } from '../../app';
             approachSelected:
             {
                 get: function () {                                        
-                    return (this.$store.state.goal!= null)?this.approachs.find(item => item.id == this.$store.state.goal.approach ) : this.approachs[0];   
+                    return (this.$store.state.goal!= null)?this.approachs.find(item => item.id == this.$store.state.goal.approach ) : this.approachs[0].id;   
+                    //return this.approachs.find(item => item.id == this.$store.state.goal.approach);   
                 }, 
                 
                 set: function (value) {    
@@ -110,13 +111,13 @@ import { eventBus } from '../../app';
         },
         methods:{
                         
-            newGoal (){                
+            saveGoal (){                
                 
                 if( this.editGoal ){
                     let params = {                                        
-                        description: this.$store.state.description,
+                        description: this.$store.state.goal.description,
                         objective_id: this.objective.id,
-                        approach: this.approachSelected.id,
+                        approach: this.$store.state.approach,
                         goal_id: this.$store.state.goal.id
                     }
 
@@ -129,10 +130,10 @@ import { eventBus } from '../../app';
 
                 }else{
                     let params = {                                        
-                        description: this.$store.state.description,
+                        description: this.$store.state.goal.description,
                         objective_id: this.objective.id,
-                        approach: this.approachSelected.id
-                    }
+                        approach: this.$store.state.goal.approach
+                    }                    
 
                     this.description = '';     
 
