@@ -3,7 +3,7 @@
     <li class="list-group-item">
         {{ goal.description }}
         <!--<span v-if="finished" class="justify-content-center">Ya ha alcanzado</span>-->
-        <span class="badge badge-pill"  v-if="goal.progress != ''">                        
+        <span class="badge badge-pill"  v-if="goal.progress != null">                        
             <i class="bi-alarm-fill"></i>  {{ goal.progress }}
             <span class="badge badge-info">Cargado</span>
         </span>   

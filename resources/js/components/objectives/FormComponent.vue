@@ -6,7 +6,7 @@
             <form action="" v-on:submit.prevent="saveObjective()">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Descripcion</label>
-                    <input type="text" class="form-control form-control-sm" name="objective" v-model="description">
+                    <input type="text" class="form-control form-control-sm" name="objective" v-model="description" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-sm">

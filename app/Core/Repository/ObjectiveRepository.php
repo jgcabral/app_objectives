@@ -21,11 +21,14 @@ class ObjectiveRepository implements IObjective{
     {
         
         return Objective::addSelect([
-                'progress'=> Goal::select(DB::raw("round(count(objective_id) / ( select count(*) from goals where goals.objective_id = objectives.id ) * 100) "))                                                                                           
+                'progress'=> Goal::select(DB::raw("round(count(objective_id) / 
+                                                ( select count(*) from goals where goals.objective_id = objectives.id ) * 100) "
+                                                 )
+                                         )                                                                                           
                                         ->where('goals.finished',  1)
                                         ->whereColumn('goals.objective_id','objectives.id')
                                         
-                ])            
+                ])                            
                 ->where('objectives.user_id','=', Auth::user()->id)                                      
                 ->get();    
     }

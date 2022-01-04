@@ -9,11 +9,7 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-4" v-if="goal">
-                        <label for="exampleInputEmail1">Meta</label>
-                        <!--<select name="goal_id" v-model="goal" class="form-select form-control">                            
-                            <option v-for="item in goals" :value="item" :key="item.id">{{ item.description }}</option>                        
-                        </select>
-                        -->
+                        <label for="exampleInputEmail1">Meta</label>                        
                         <input type="text" v-model="goal.description" class="form-select form-control" disabled="disabled">
                     </div>
 
@@ -30,7 +26,7 @@
 
                     <div class="form-group col-md-4">
                         <label for="exampleInputEmail1">Tiempo</label>
-                        <select name="time" v-model="timeSelected" class="form-select form-control">
+                        <select name="time" v-model="timeSelected" class="form-select form-control" required>
                             <option>---- Seleccionar tiempo ----</option>
                             <option v-for="item in times" :value="item" :key="item.id">{{ item.description }}</option>                        
                         </select>

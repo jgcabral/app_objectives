@@ -16,7 +16,7 @@
 
                     <div class="form-group col-md-4">
                         <label for="">Descripcion</label>
-                        <input type="text" class="form-control" name="goal" v-model="description">
+                        <input type="text" class="form-control" name="goal" v-model="description" required>
                     </div>
 
                     <div class="form-group col-md-4">
@@ -87,8 +87,7 @@ import { eventBus } from '../../app';
             approachSelected:
             {
                 get: function () {                                        
-                    return (this.$store.state.goal!= null)?this.approachs.find(item => item.id == this.$store.state.goal.approach ) : this.approachs[0].id;   
-                    //return this.approachs.find(item => item.id == this.$store.state.goal.approach);   
+                    return (this.$store.state.goal!= null)?this.approachs.find(item => item.id == this.$store.state.goal.approach ) : this.approachs[0].id;                       
                 }, 
                 
                 set: function (value) {    
